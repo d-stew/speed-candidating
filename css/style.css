@@ -40,6 +40,7 @@ header h3 {
 }
 
 .about-main {
+  padding: 4% 0 4% 0;
   color: white;
   background-color: rgb(17, 49, 120);
   text-align: center;
