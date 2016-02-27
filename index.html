@@ -3,25 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <title>SPEED (candi)DATING</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
   </head>
 
   <body>
-    <header>
+    <header class="landing">
       <img alt="Banner" src="flag.png" id="flagBanner">
+      <h3>It's Election Season!</h3>
       <h1>Don't know who to vote for?</h1>
-      <h3> We make things easier.</h3>
+      <h3>We make things easier.</h3>
       <br>
-      <div class="scd">
+      <button class="enter">Find My Perfect Candidate</button>
+    </header>
+
+    <div id="about">
+      <div class="top-bar">
         <img alt="speed" src="speed.png" id="speed">
         <img alt="candidating" src="candidating.png" id="candidating">
       </div>
-    </header>
+      <div class="container-fluid about-main">
+        <h1>Here's how it works:</h1>
+        <h3>Step 1: Tell us which issues matter most to you</h3>
+        <h3>Step 2: Evaluate candidate profiles based on those issues</h3>
+        <h3>Step 3: Find out which candidate is the best match for you!</h3>
+        <h3>And of course...VOTE.</h3>
+        <h4>We'll help you find the nearest polling location.</h4>
+      </div>
+      <div class="container-fluid text-center">
+        <img class="heads img-circle" src="johnson.jpg">
+        <img class="heads img-circle" src="trump.jpg">
+        <img class="heads img-circle" src="sanders.jpg">
+        <img class="heads img-circle" src="carson.jpg">
+        <img class="heads img-circle" src="clinton.jpg">
+        <img class="heads img-circle" src="kasich.jpg">
+        <img class="heads img-circle" src="cruz.jpg">
+        <img class="heads img-circle" src="stein.jpg">
+      </div>
+      <nav class="center-block">
+        <ul class="pager">
+          <li><a href="#">Previous Candidate</a></li>
+          <li><a href="#">Next Candidate</a></li>
+        </ul>
+      </nav>
+    </div>
 
   </body>
+  <script type="text/javascript" src="app.js"></script>
 </html>
