@@ -1,0 +1,24 @@
+#flagBanner {
+  margin-bottom: -50px;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: rgb(17, 49, 120);
+  margin-left: 3%;
+}
+
+header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: rgb(200, 56, 53);
+  margin-left: 3.3%;
+}
+
+.scd {
+  text-align: center;
+  margin: 4% 0 0 3%;
+}
