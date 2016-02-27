@@ -18,7 +18,7 @@ header h3 {
   margin: 0 0 3% 3.3%;
 }
 
-.enter {
+.enter-button {
   font-size: 22px;
   border: none;
   border-radius: 4px;
@@ -46,8 +46,6 @@ header h3 {
   text-align: center;
 }
 
-
-
 .heads {
   height: 140px;
   width: 140px;
@@ -56,4 +54,17 @@ header h3 {
 
 .pagination {
   text-align: center;
+}
+
+.issues {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(17, 49, 120);
+  margin: 0 0 3% 3%;
+}
+
+.issues label {
+  color: rgb(200, 56, 53);
 }
