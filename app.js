@@ -85,4 +85,9 @@ $(document).ready(function(){
     $('.marriage').slideUp();
     $('.religion').fadeIn();
   });
+
+  $('.religion-button').click(function(){
+    $('.religion').slideUp();
+    $('.epa').fadeIn();
+  });
 });
