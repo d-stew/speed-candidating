@@ -55,4 +55,24 @@ $(document).ready(function(){
     $('.taxes').slideUp();
     $('.immigration').fadeIn();
   });
+
+  $('.immigration-button').click(function(){
+    $('.immigration').slideUp();
+    $('.ss').fadeIn();
+  });
+
+  $('.ss-button').click(function(){
+    $('.ss').slideUp();
+    $('.military').fadeIn();
+  });
+
+  $('.military-button').click(function(){
+    $('.military').slideUp();
+    $('.fp').fadeIn();
+  });
+
+  $('.fp-button').click(function(){
+    $('.fp').slideUp();
+    $('.tpp').fadeIn();
+  });
 });
