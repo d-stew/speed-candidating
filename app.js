@@ -50,4 +50,9 @@ $(document).ready(function(){
     $('.pot').slideUp();
     $('.taxes').fadeIn();
   });
+
+  $('.taxes-button').click(function(){
+    $('.taxes').slideUp();
+    $('.immigration').fadeIn();
+  });
 });
