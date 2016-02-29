@@ -100,4 +100,14 @@ $(document).ready(function(){
     $('.voting').slideUp();
     $('.nsa').fadeIn();
   });
+
+  $('.nsa-button').click(function(){
+    $('.nsa').slideUp();
+    $('.wages').fadeIn();
+  });
+
+  $('.wages-button').click(function(){
+    $('.wages').slideUp();
+    $('.citizens').fadeIn();
+  });
 });

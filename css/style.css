@@ -54,8 +54,8 @@ header h3 {
 
 /*Tinder-style profile*/
 .tinder {
-  max-width: 33%;
-  height: 360px;
+  max-width: 36%;
+  height: 380px;
   margin: 0 auto;
   border-radius: 8px;
   display: flex;
