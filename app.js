@@ -39,5 +39,15 @@ $(document).ready(function(){
   $('.healthcare-button').click(function(){
     $('.healthcare').slideUp();
     $('.energy').fadeIn();
-  })
+  });
+
+  $('.energy-button').click(function(){
+    $('.energy').slideUp();
+    $('.pot').fadeIn();
+  });
+
+  $('.pot-button').click(function(){
+    $('.pot').slideUp();
+    $('.taxes').fadeIn();
+  });
 });
