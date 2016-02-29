@@ -2,12 +2,12 @@ $(document).ready(function(){
   $('div').hide();
   $('.tinder').hide();
 
-  $('button').mouseenter(function() {
+  $('.enter-button').mouseenter(function() {
     $(this).filter(':not(:animated)').animate({height: '+=15px', width: '+=15px'});
   }, function() {
     $(this).animate({height: '+=15px', width: '+=15px'});
       });
-  $('button').mouseleave(function() {
+  $('.enter-button').mouseleave(function() {
     $(this).filter(':not(:animated)').animate({height: '-=15px', width: '-=15px'});
   }, function() {
     $(this).animate({height: '-=15px', width: '-=15px'});
