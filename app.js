@@ -75,4 +75,14 @@ $(document).ready(function(){
     $('.fp').slideUp();
     $('.tpp').fadeIn();
   });
+
+  $('.tpp-button').click(function(){
+    $('.tpp').slideUp();
+    $('.marriage').fadeIn();
+  });
+
+  $('.marriage-button').click(function(){
+    $('.marriage').slideUp();
+    $('.religion').fadeIn();
+  });
 });
