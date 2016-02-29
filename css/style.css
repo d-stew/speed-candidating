@@ -52,21 +52,16 @@ header h3 {
   margin-top: 2%;
 }
 
-.pagination {
-  text-align: center;
-}
-
 /*Tinder-style profile*/
 .tinder {
-  max-width: 30%;
-  height: 375px;
+  max-width: 33%;
+  height: 360px;
   margin: 0 auto;
-  border: 1px solid gray;
   border-radius: 8px;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  background-color: white;
+  background-color: rgb(17, 49, 120);
+  color: white;
 }
 
 .column h1 {
@@ -78,7 +73,6 @@ header h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid gray;
 }
 
 .column {
