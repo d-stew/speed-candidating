@@ -90,4 +90,14 @@ $(document).ready(function(){
     $('.religion').slideUp();
     $('.epa').fadeIn();
   });
+
+  $('.epa-button').click(function(){
+    $('.epa').slideUp();
+    $('.voting').fadeIn();
+  });
+
+  $('.voting-button').click(function(){
+    $('.voting').slideUp();
+    $('.nsa').fadeIn();
+  });
 });
