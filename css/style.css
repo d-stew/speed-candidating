@@ -54,8 +54,8 @@ header h3 {
 
 /*Tinder-style profile*/
 .tinder {
-  max-width: 36%;
-  height: 380px;
+  max-width: 37%;
+  height: 390px;
   margin: 0 auto;
   border-radius: 8px;
   display: flex;
@@ -64,8 +64,9 @@ header h3 {
   color: white;
 }
 
-.column h1 {
+.column h3 {
   text-align: center;
+  font-size: 22px;
 }
 
 .column img {
@@ -147,4 +148,11 @@ header h3 {
 
 .btn.strong-agree:hover {
   border-color: rgb(3, 37, 89);
+}
+
+.match h1 {
+  font-family: 'Pacifico', cursive;
+  color: rgb(17, 49, 120);
+  font-size: 62px;
+  text-align: center;
 }

@@ -110,4 +110,9 @@ $(document).ready(function(){
     $('.wages').slideUp();
     $('.citizens').fadeIn();
   });
+
+  $('.citizens-button').click(function(){
+    $('.citizens').slideUp();
+    $('.match').fadeIn('slow');
+  });
 });
