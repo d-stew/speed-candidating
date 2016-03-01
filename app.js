@@ -237,8 +237,14 @@ $(document).ready(function(){
         candidates[i].matchScore += 1;
       };
     };
+    candidates.sort(function(a,b) {
+			return  b.matchScore - a.matchScore;
+		});
     $('.abortion').slideUp();
+    $('.head-bar').slideUp();
     $('.match').fadeIn('slow');
+    $('.insert').append('<img class="match" src=' + candidates[0].image +'>');
+    $('.insert').append('<h2 class="match">' + candidates[0].name + '!</h2>');
   });
 
 });
@@ -264,7 +270,8 @@ var trump = {
   nsa: 2,
   wages: 1,
   citizens: 4,
-  abortion: 2
+  abortion: 2,
+  image: "images/trump.jpg"
 };
 
 var sanders = {
@@ -289,6 +296,7 @@ var sanders = {
   wages: 5,
   citizens: 5,
   abortion: 5,
+  image: "images/sanders.jpg"
 };
 
 var carson = {
@@ -313,6 +321,7 @@ var carson = {
   wages: 2,
   citizens: 3,
   abortion: 1,
+  image: "images/carson.jpg"
 };
 
 var johnson = {
@@ -337,6 +346,7 @@ var johnson = {
   wages: 3,
   citizens: 4,
   abortion: 4,
+  image: "images/johnson.jpg"
 };
 
 var rubio = {
@@ -361,6 +371,7 @@ var rubio = {
   wages: 2,
   citizens: 1,
   abortion: 1,
+  image: "images/rubio.jpg"
 };
 
 var clinton = {
@@ -385,6 +396,7 @@ var clinton = {
   wages: 4,
   citizens: 5,
   abortion: 5,
+  image: "images/clinton.jpg"
 };
 
 var kasich = {
@@ -409,6 +421,7 @@ var kasich = {
   wages: 3,
   citizens: 3,
   abortion: 2,
+  image: "images/kasich.jpg"
 };
 
 var cruz = {
@@ -433,6 +446,7 @@ var cruz = {
   wages: 1,
   citizens: 1,
   abortion: 1,
+  image: "images/cruz.jpg"
 };
 
 var stein = {
@@ -457,6 +471,7 @@ var stein = {
   wages: 5,
   citizens: 5,
   abortion: 5,
+  image: "images/stein.jpg"
 };
 
 var candidates = [trump,sanders,carson,johnson,rubio,clinton,kasich,cruz,stein]

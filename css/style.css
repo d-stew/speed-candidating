@@ -150,9 +150,42 @@ header h3 {
   border-color: rgb(3, 37, 89);
 }
 
+.match {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgb(17, 49, 120);
+}
+
 .match h1 {
   font-family: 'Pacifico', cursive;
-  color: rgb(17, 49, 120);
-  font-size: 62px;
+  color: white;
+  font-size: 72px;
   text-align: center;
+}
+
+.match h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+
+.insert {
+  display: flex;
+  align-items: flex-start;
+}
+
+img.match {
+  max-height: 375px;
+  max-width: 375px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+h2.match {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 56px;
 }
