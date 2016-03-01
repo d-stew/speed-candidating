@@ -3,6 +3,7 @@ $(document).ready(function(){
   $('.tinder').hide();
   $('.buttons').hide();
 
+  // Animate 'Find My Ideal Candidate' button
   $('.enter-button').mouseenter(function() {
     $(this).filter(':not(:animated)').animate({height: '+=15px', width: '+=15px'});
   }, function() {
@@ -14,11 +15,13 @@ $(document).ready(function(){
     $(this).animate({height: '-=15px', width: '-=15px'});
       });
 
+  // Go to Overview page
   $('.enter-button').on('click', function(){
     $('.landing').slideUp();
     $('div').show();
   });
 
+  // Go to first issue page
   $('.start-button').on('click', function(){
     $('.about-main').slideUp(1000);
     $('.guns').show();
@@ -26,118 +29,214 @@ $(document).ready(function(){
     $('.img-circle').animate({'height':'100px','width':'100px'}, 1000);
   });
 
+  // Object object to store user responses
   var user = {};
 
   $('.gun-button').click(function(){
     user.guns = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].guns) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.guns').slideUp();
     $('.crime').fadeIn();
   });
 
   $('.crime-button').click(function() {
     user.crime = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].crime) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.crime').slideUp();
     $('.healthcare').fadeIn();
   });
 
   $('.healthcare-button').click(function(){
     user.healthcare = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].healthcare) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.healthcare').slideUp();
     $('.energy').fadeIn();
   });
 
   $('.energy-button').click(function(){
     user.energy = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].energy) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.energy').slideUp();
     $('.drugs').fadeIn();
   });
 
   $('.drugs-button').click(function(){
     user.drugs = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].drugs) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.drugs').slideUp();
     $('.taxes').fadeIn();
   });
 
   $('.taxes-button').click(function(){
     user.taxes = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].taxes) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.taxes').slideUp();
     $('.immigration').fadeIn();
   });
 
   $('.immigration-button').click(function(){
     user.immigration = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].immigration) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.immigration').slideUp();
     $('.ss').fadeIn();
   });
 
   $('.ss-button').click(function(){
     user.ss = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].ss) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.ss').slideUp();
     $('.military').fadeIn();
   });
 
   $('.military-button').click(function(){
     user.military = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].military) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.military').slideUp();
     $('.fp').fadeIn();
   });
 
   $('.fp-button').click(function(){
     user.fp = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].fp) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.fp').slideUp();
     $('.tpp').fadeIn();
   });
 
   $('.tpp-button').click(function(){
     user.tpp = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].tpp) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.tpp').slideUp();
     $('.marriage').fadeIn();
   });
 
   $('.marriage-button').click(function(){
     user.marriage = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].marriage) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.marriage').slideUp();
     $('.religion').fadeIn();
   });
 
   $('.religion-button').click(function(){
     user.religion = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].religion) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.religion').slideUp();
     $('.epa').fadeIn();
   });
 
   $('.epa-button').click(function(){
     user.epa = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].epa) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.epa').slideUp();
     $('.voting').fadeIn();
   });
 
   $('.voting-button').click(function(){
     user.voting = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].voting) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.voting').slideUp();
     $('.nsa').fadeIn();
   });
 
   $('.nsa-button').click(function(){
     user.nsa = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].nsa) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.nsa').slideUp();
     $('.wages').fadeIn();
   });
 
   $('.wages-button').click(function(){
     user.wages = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].wages) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.wages').slideUp();
     $('.citizens').fadeIn();
   });
 
   $('.citizens-button').click(function(){
     user.citizens = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].citizens) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.citizens').slideUp();
     $('.abortion').fadeIn('slow');
   });
 
   $('.abortion-button').click(function(){
     user.abortion = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].abortion) {
+        candidates[i].matchScore += 1;
+      };
+    };
     $('.abortion').slideUp();
     $('.match').fadeIn('slow');
   });
@@ -313,14 +412,51 @@ var kasich = {
 };
 
 var cruz = {
-
+  name: "Ted Cruz",
+  matchScore: 0,
+  guns: 1,
+  crime: 5,
+  healthcare: 1,
+  energy: 1,
+  drugs: 2,
+  taxes: 1,
+  immigration: 1,
+  ss: 5,
+  military: 5,
+  fp: 2,
+  tpp: 5,
+  marriage: 1,
+  religion: 5,
+  epa: 2,
+  voting: 3,
+  nsa: 4,
+  wages: 1,
+  citizens: 1,
+  abortion: 1,
 };
 
 var stein = {
-
+  name: "Jill Stein",
+  matchScore: 0,
+  guns: 5,
+  crime: 1,
+  healthcare: 5,
+  energy: 5,
+  drugs: 5,
+  taxes: 5,
+  immigration: 5,
+  ss: 1,
+  military: 1,
+  fp: 5,
+  tpp: 1,
+  marriage: 5,
+  religion: 1,
+  epa: 5,
+  voting: 5,
+  nsa: 5,
+  wages: 5,
+  citizens: 5,
+  abortion: 5,
 };
 
 var candidates = [trump,sanders,carson,johnson,rubio,clinton,kasich,cruz,stein]
-
-console.log(trump);
-console.log(candidates);
