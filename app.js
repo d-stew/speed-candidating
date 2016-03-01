@@ -32,8 +32,11 @@ $(document).ready(function(){
   // Object object to store user responses
   var user = {};
 
+  // Beginning of policy evaluations
   $('.gun-button').click(function(){
+    // Stores response in user object
     user.guns = this.value;
+    // Adds 1 to match score if candidate and user align
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].guns) {
         candidates[i].matchScore += 1;
@@ -237,18 +240,24 @@ $(document).ready(function(){
         candidates[i].matchScore += 1;
       };
     };
+    // Sorts candidates by match score
     candidates.sort(function(a,b) {
 			return  b.matchScore - a.matchScore;
 		});
+
     $('.abortion').slideUp();
     $('.head-bar').slideUp();
     $('.match').fadeIn('slow');
+    // Adds picture and name of best candidate match
     $('.match-pic').append('<img class="match" src=' + candidates[0].image +'>');
     $('.match-info').append('<h2 class="match">' + candidates[0].name + '</h2>');
     $('.match-info').append('<p class="match">You agreed on <b>' + candidates[0].matchScore + ' out of 19</b> issues.</p>');
   });
 
 });
+
+
+// Candidate profiles
 
 var trump = {
   name: "Donald Trump",
