@@ -217,7 +217,31 @@ var carson = {
 };
 
 var johnson = {
-  name: "Bernie Sanders",
+  name: "Gary Johnson",
+  matchScore: 0,
+  guns: 5,
+  crime: 2,
+  healthcare: 1,
+  energy: 2,
+  drugs: 5,
+  taxes: 1,
+  immigration: 5,
+  ss: 4,
+  military: 1,
+  fp: 5,
+  tpp: 4,
+  marriage: 5,
+  religion: 4,
+  epa: 2,
+  voting: 2,
+  nsa: 5,
+  wages: 3,
+  citizens: 4,
+  abortion: 4,
+};
+
+var rubio = {
+  name: "Marco Rubio",
   matchScore: 0,
   guns: 3,
   crime: 1,
@@ -238,10 +262,6 @@ var johnson = {
   wages: 5,
   citizens: 5,
   abortion: 5,
-};
-
-var rubio = {
-
 };
 
 var clinton = {
