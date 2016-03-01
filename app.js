@@ -133,8 +133,134 @@ $(document).ready(function(){
   $('.citizens-button').click(function(){
     user.citizens = this.value;
     $('.citizens').slideUp();
+    $('.abortion').fadeIn('slow');
+  });
+
+  $('.abortion-button').click(function(){
+    user.abortion = this.value;
+    $('.abortion').slideUp();
     $('.match').fadeIn('slow');
-    console.log(user);
   });
 
 });
+
+var trump = {
+  name: "Donald Trump",
+  matchScore: 0,
+  guns: 5,
+  crime: 5,
+  healthcare: 2,
+  energy: 1,
+  drugs: 2,
+  taxes: 4,
+  immigration: 1,
+  ss: 4,
+  military: 5,
+  fp: 4,
+  tpp: 2,
+  marriage: 2,
+  religion: 5,
+  epa: 1,
+  voting: 4,
+  nsa: 2,
+  wages: 1,
+  citizens: 4,
+  abortion: 2
+};
+
+var sanders = {
+  name: "Bernie Sanders",
+  matchScore: 0,
+  guns: 3,
+  crime: 1,
+  healthcare: 5,
+  energy: 5,
+  drugs: 5,
+  taxes: 5,
+  immigration: 4,
+  ss: 1,
+  military: 2,
+  fp: 5,
+  tpp: 1,
+  marriage: 5,
+  religion: 1,
+  epa: 5,
+  voting: 5,
+  nsa: 5,
+  wages: 5,
+  citizens: 5,
+  abortion: 5,
+};
+
+var carson = {
+  name: "Ben Carson",
+  matchScore: 0,
+  guns: 1,
+  crime: 2,
+  healthcare: 2,
+  energy: 2,
+  drugs: 1,
+  taxes: 1,
+  immigration: 2,
+  ss: 5,
+  military: 4,
+  fp: 2,
+  tpp: 4,
+  marriage: 2,
+  religion: 5,
+  epa: 2,
+  voting: 3,
+  nsa: 4,
+  wages: 2,
+  citizens: 3,
+  abortion: 1,
+};
+
+var johnson = {
+  name: "Bernie Sanders",
+  matchScore: 0,
+  guns: 3,
+  crime: 1,
+  healthcare: 5,
+  energy: 5,
+  drugs: 5,
+  taxes: 5,
+  immigration: 4,
+  ss: 1,
+  military: 2,
+  fp: 5,
+  tpp: 1,
+  marriage: 5,
+  religion: 1,
+  epa: 5,
+  voting: 5,
+  nsa: 5,
+  wages: 5,
+  citizens: 5,
+  abortion: 5,
+};
+
+var rubio = {
+
+};
+
+var clinton = {
+
+};
+
+var kasich = {
+
+};
+
+var cruz = {
+
+};
+
+var stein = {
+
+};
+
+var candidates = [trump,sanders,carson,johnson,rubio,clinton,kasich,cruz,stein]
+
+console.log(trump);
+console.log(candidates);
