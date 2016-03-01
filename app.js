@@ -244,7 +244,7 @@ $(document).ready(function(){
     $('.head-bar').slideUp();
     $('.match').fadeIn('slow');
     $('.match-pic').append('<img class="match" src=' + candidates[0].image +'>');
-    $('.match-info').append('<h2 class="match">' + candidates[0].name + '!</h2>');
+    $('.match-info').append('<h2 class="match">' + candidates[0].name + '</h2>');
     $('.match-info').append('<p class="match">You agreed on <b>' + candidates[0].matchScore + ' out of 19</b> issues.</p>');
   });
 

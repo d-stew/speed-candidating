@@ -172,8 +172,8 @@ header h3 {
 }
 
 img.match {
-  max-height: 375px;
-  max-width: 375px;
+  max-height: 400px;
+  max-width: 400px;
   margin-left: 20px;
   margin-bottom: 40px;
   border-radius: 8px;
