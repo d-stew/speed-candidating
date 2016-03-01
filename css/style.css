@@ -171,11 +171,6 @@ header h3 {
   text-align: center;
 }
 
-.insert {
-  display: flex;
-  align-items: flex-start;
-}
-
 img.match {
   max-height: 375px;
   max-width: 375px;
@@ -186,6 +181,15 @@ img.match {
 
 h2.match {
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    background-color: white;
+    color: rgb(17, 49, 120);
     font-size: 56px;
+    text-align: center;
+}
+
+p.match {
+  background-color: white;
+  color: rgb(17, 49, 120);
+  font-size: 24px;
+  text-align: center;
 }
