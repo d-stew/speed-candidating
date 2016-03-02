@@ -163,6 +163,10 @@ header h3 {
   text-align: center;
 }
 
+.match h4 {
+  text-align: center;
+}
+
 img.match {
   height: 150px;
   width: 150px;
