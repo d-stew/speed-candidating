@@ -337,41 +337,29 @@ console.log('avg', localStorage.getItem('avg'));
     $('.match-pic-1').append('<img class="match" src=' + candidates[0].image +'>');
     $('.match-pic-2').append('<img class="match" src=' + candidates[1].image +'>');
     $('.match-pic-3').append('<img class="match" src=' + candidates[2].image +'>');
-    $('.match-pic-4').append('<img class="match" src=' + candidates[3].image +'>');
-    $('.match-pic-5').append('<img class="match" src=' + candidates[4].image +'>');
     // Add candidate names & info to match table
     $('.match-info-1').prepend('<h4 class="match">' + candidates[0].info.name + '</h4>');
     $('.match-info-2').prepend('<h4 class="match">' + candidates[1].info.name + '</h4>');
     $('.match-info-3').prepend('<h4 class="match">' + candidates[2].info.name + '</h4>');
-    $('.match-info-4').prepend('<h4 class="match">' + candidates[3].info.name + '</h4>');
-    $('.match-info-5').prepend('<h4 class="match">' + candidates[4].info.name + '</h4>');
     // Add candidate compatibility score to match table
     $('.match-score-1').prepend('<h2 class="match">'+ ((candidates[0].matchScore / 19)*100).toFixed() +'%</h2>');
     $('.match-score-2').prepend('<h2 class="match">'+ ((candidates[1].matchScore / 19)*100).toFixed() +'%</h2>');
     $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 19)*100).toFixed() +'%</h2>');
-    $('.match-score-4').prepend('<h2 class="match">'+ ((candidates[3].matchScore / 19)*100).toFixed() +'%</h2>');
-    $('.match-score-5').prepend('<h2 class="match">'+ ((candidates[4].matchScore / 19)*100).toFixed() +'%</h2>');
-  
+
     // localStorage.setItem('avgHillary', ((candidates[0].matchScore / 19)*100).toFixed() * localStorage.getItem('avgHillary'))
 
     // Add candidate affiliation to match table
     $('.affiliation-1').append(' ' + candidates[0].info.affiliation);
     $('.affiliation-2').append(' ' + candidates[1].info.affiliation);
     $('.affiliation-3').append(' ' + candidates[2].info.affiliation);
-    $('.affiliation-4').append(' ' + candidates[3].info.affiliation);
-    $('.affiliation-5').append(' ' + candidates[4].info.affiliation);
     // Add candidate position to match table
     $('.position-1').append(' ' + candidates[0].info.position);
     $('.position-2').append(' ' + candidates[1].info.position);
     $('.position-3').append(' ' + candidates[2].info.position);
-    $('.position-4').append(' ' + candidates[3].info.position);
-    $('.position-5').append(' ' + candidates[4].info.position);
     // Add candidate experience to match table
     $('.experience-1').append(' ' + candidates[0].info.experience);
     $('.experience-2').append(' ' + candidates[1].info.experience);
     $('.experience-3').append(' ' + candidates[2].info.experience);
-    $('.experience-4').append(' ' + candidates[3].info.experience);
-    $('.experience-5').append(' ' + candidates[4].info.experience);
   });
 
 });
