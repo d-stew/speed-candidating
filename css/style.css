@@ -203,4 +203,5 @@ td {
 #shareButton {
   display: block !important;
   text-align: center;
+  margin-bottom: 10px;
 }
