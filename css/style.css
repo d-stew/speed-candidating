@@ -150,8 +150,8 @@ header h3 {
 }
 
 .match {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
   color: white;
   background-color: rgb(17, 49, 120);
 }
@@ -160,6 +160,10 @@ header h3 {
   font-family: 'Pacifico', cursive;
   color: white;
   font-size: 62px;
+  text-align: center;
+}
+
+.match h4 {
   text-align: center;
 }
 
