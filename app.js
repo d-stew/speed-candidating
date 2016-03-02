@@ -4,8 +4,6 @@ localStorage.setItem('avg', '20%');
 console.log('avg', localStorage.getItem('avg'));
 
   $('div').hide();
-  // $('.tinder').hide();
-  // $('.buttons').hide();
 
   // Animate 'Find My Ideal Candidate' button
   $('.enter-button').mouseenter(function() {

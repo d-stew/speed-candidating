@@ -199,3 +199,8 @@ p.match {
 td {
   vertical-align: middle !important;
 }
+
+#shareButton {
+  display: block !important;
+  text-align: center;
+}
