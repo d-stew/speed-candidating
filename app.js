@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+localStorage.setItem('avg', '20%');
+console.log('avg', localStorage.getItem('avg'));
+
   $('div').hide();
   // $('.tinder').hide();
   // $('.buttons').hide();
@@ -347,6 +351,9 @@ $(document).ready(function(){
     $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 19)*100).toFixed() +'%</h2>');
     $('.match-score-4').prepend('<h2 class="match">'+ ((candidates[3].matchScore / 19)*100).toFixed() +'%</h2>');
     $('.match-score-5').prepend('<h2 class="match">'+ ((candidates[4].matchScore / 19)*100).toFixed() +'%</h2>');
+  
+    // localStorage.setItem('avgHillary', ((candidates[0].matchScore / 19)*100).toFixed() * localStorage.getItem('avgHillary'))
+
     // Add candidate affiliation to match table
     $('.affiliation-1').append(' ' + candidates[0].info.affiliation);
     $('.affiliation-2').append(' ' + candidates[1].info.affiliation);
