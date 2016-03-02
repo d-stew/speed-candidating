@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta property="og:url"                content="http://d-stew.github.io/personal-project-q1/"/>
+    <meta property="og:title"              content="Speed CandiDating"/>
+    <meta property="og:description"        content="A twist on the classic game Breakout!"/>
+    <meta property="og:image"              content="http://i.imgur.com/pIWDvi8.png" />
+
     <title>SPEED candiDATING</title>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
@@ -14,11 +19,29 @@
   </head>
 
   <body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '232121383803073',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <header class="landing">
       <img alt="Banner" src="images/flag.png" id="flagBanner">
       <h3>It's Election Season!</h3>
       <h1>Don't know who to vote for?</h1>
+      <div id='shareButton' class="fb-share-button" data-href="http://d-stew.github.io/personal-project-q1/" data-layout="button"></div>
       <h3>We make it easy to decide.</h3>
       <br>
       <button class="button enter-button">Find My Perfect Candidate</button>
