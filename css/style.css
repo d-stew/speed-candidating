@@ -18,6 +18,10 @@ header h3 {
   margin: 0 0 3% 3.3%;
 }
 
+h3 {
+  margin-top: 12px;
+}
+
 .enter-button {
   font-size: 22px;
   border: none;
@@ -54,7 +58,7 @@ header h3 {
 
 .tinder {
   max-width: 37%;
-  height: 390px;
+  height: 410px;
   margin: 0 auto;
   border-radius: 8px;
   display: flex;
@@ -81,11 +85,15 @@ header h3 {
   flex-shrink: 1;
 }
 
+.glyphicon {
+  text-align: center;
+}
+
 .issues {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   text-align: center;
-  margin: 3% 0 0 0;
+  margin: 1.5% 0 0 0;
 }
 
 .btn-circle.btn-xl {
