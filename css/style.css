@@ -177,12 +177,11 @@ img.match {
   border-radius: 8px;
 }
 
-h2.match {
+h4.match {
     font-family: 'Montserrat', sans-serif;
     background-color: white;
     color: rgb(17, 49, 120);
-    font-size: 56px;
-    text-align: center;
+    font-size: 32px;
 }
 
 p.match {

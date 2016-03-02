@@ -255,12 +255,12 @@ $(document).ready(function(){
     $('.match-pic-4').append('<img class="match" src=' + candidates[3].image +'>');
     $('.match-pic-5').append('<img class="match" src=' + candidates[4].image +'>');
     // Add candidate names & info to match table
-    $('.match-info-1').append('<h2 class="match">' + candidates[0].name + '</h2>');
-    $('.match-info-2').append('<h2 class="match">' + candidates[1].name + '</h2>');
-    $('.match-info-3').append('<h2 class="match">' + candidates[2].name + '</h2>');
-    $('.match-info-4').append('<h2 class="match">' + candidates[3].name + '</h2>');
-    $('.match-info-5').append('<h2 class="match">' + candidates[4].name + '</h2>');
-    
+    $('.match-info-1').append('<h4 class="match">' + candidates[0].name + '</h4>');
+    $('.match-info-2').append('<h4 class="match">' + candidates[1].name + '</h4>');
+    $('.match-info-3').append('<h4 class="match">' + candidates[2].name + '</h4>');
+    $('.match-info-4').append('<h4 class="match">' + candidates[3].name + '</h4>');
+    $('.match-info-5').append('<h4 class="match">' + candidates[4].name + '</h4>');
+
     $('.match-info').append('<p class="match">You agreed on <b>' + candidates[0].matchScore + ' out of 19</b> issues.</p>');
   });
 
