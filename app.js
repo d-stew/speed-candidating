@@ -267,11 +267,23 @@ $(document).ready(function(){
     $('.match-score-4').prepend('<h2 class="match">'+ ((candidates[3].matchScore / 19)*100).toFixed() +'%</h2>');
     $('.match-score-5').prepend('<h2 class="match">'+ ((candidates[4].matchScore / 19)*100).toFixed() +'%</h2>');
     // Add candidate affiliation to match table
-    $('.affiliation-1').append(' ' + candidates[0].info.affiliation)
-    $('.affiliation-2').append(' ' + candidates[1].info.affiliation)
-    $('.affiliation-3').append(' ' + candidates[2].info.affiliation)
-    $('.affiliation-4').append(' ' + candidates[3].info.affiliation)
-    $('.affiliation-5').append(' ' + candidates[4].info.affiliation)
+    $('.affiliation-1').append(' ' + candidates[0].info.affiliation);
+    $('.affiliation-2').append(' ' + candidates[1].info.affiliation);
+    $('.affiliation-3').append(' ' + candidates[2].info.affiliation);
+    $('.affiliation-4').append(' ' + candidates[3].info.affiliation);
+    $('.affiliation-5').append(' ' + candidates[4].info.affiliation);
+    // Add candidate position to match table
+    $('.position-1').append(' ' + candidates[0].info.position);
+    $('.position-2').append(' ' + candidates[1].info.position);
+    $('.position-3').append(' ' + candidates[2].info.position);
+    $('.position-4').append(' ' + candidates[3].info.position);
+    $('.position-5').append(' ' + candidates[4].info.position);
+    // Add candidate experience to match table
+    $('.experience-1').append(' ' + candidates[0].info.experience);
+    $('.experience-2').append(' ' + candidates[1].info.experience);
+    $('.experience-3').append(' ' + candidates[2].info.experience);
+    $('.experience-4').append(' ' + candidates[3].info.experience);
+    $('.experience-5').append(' ' + candidates[4].info.experience);
   });
 
 });
