@@ -29,17 +29,21 @@ $(document).ready(function(){
     $('.img-circle').animate({'height':'100px','width':'100px'}, 1000);
   });
 
-  // Object object to store user responses
+  // Object to store user responses
   var user = {};
 
   // Beginning of policy evaluations
   $('.gun-button').click(function(){
     // Stores response in user object
     user.guns = this.value;
-    // Adds 1 to match score if candidate and user align
     for (var i = 0; i < candidates.length; i++) {
+      // Adds 1 to match score if candidate and user have exact match
       if(this.value == candidates[i].guns) {
         candidates[i].matchScore += 1;
+      };
+      // Adds 0.5 to match score if candidate and user have soft match
+      if(Math.abs(this.value - candidates[i].guns) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.guns').slideUp();
@@ -52,6 +56,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].crime) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].crime) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.crime').slideUp();
     $('.healthcare').fadeIn();
@@ -62,6 +69,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].healthcare) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].healthcare) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.healthcare').slideUp();
@@ -74,6 +84,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].energy) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].energy) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.energy').slideUp();
     $('.drugs').fadeIn();
@@ -84,6 +97,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].drugs) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].drugs) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.drugs').slideUp();
@@ -96,6 +112,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].taxes) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].taxes) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.taxes').slideUp();
     $('.immigration').fadeIn();
@@ -106,6 +125,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].immigration) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].immigration) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.immigration').slideUp();
@@ -118,6 +140,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].ss) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].ss) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.ss').slideUp();
     $('.military').fadeIn();
@@ -128,6 +153,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].military) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].military) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.military').slideUp();
@@ -140,6 +168,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].fp) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].fp) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.fp').slideUp();
     $('.tpp').fadeIn();
@@ -150,6 +181,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].tpp) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].tpp) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.tpp').slideUp();
@@ -162,6 +196,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].marriage) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].marriage) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.marriage').slideUp();
     $('.religion').fadeIn();
@@ -172,6 +209,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].religion) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].religion) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.religion').slideUp();
@@ -184,6 +224,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].epa) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].epa) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.epa').slideUp();
     $('.voting').fadeIn();
@@ -194,6 +237,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].voting) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].voting) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.voting').slideUp();
@@ -206,6 +252,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].nsa) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].nsa) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.nsa').slideUp();
     $('.wages').fadeIn();
@@ -216,6 +265,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].wages) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].wages) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.wages').slideUp();
@@ -228,6 +280,9 @@ $(document).ready(function(){
       if(this.value == candidates[i].citizens) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].citizens) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.citizens').slideUp();
     $('.abortion').fadeIn('slow');
@@ -238,6 +293,9 @@ $(document).ready(function(){
     for (var i = 0; i < candidates.length; i++) {
       if(this.value == candidates[i].abortion) {
         candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].abortion) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     // Sorts candidates by match score
@@ -344,7 +402,7 @@ var sanders = {
 var carson = {
   info: {name: "Ben Carson", affiliation: "Republican Party", position: "Former Neurosurgeon", experience: "Never held office"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 2,
   healthcare: 2,
   energy: 2,
@@ -394,7 +452,7 @@ var johnson = {
 var rubio = {
   info: {name: "Marco Rubio", affiliation: "Republican Party", position: "U.S. Senator (Florida)", experience: "15 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 5,
   healthcare: 2,
   energy: 2,
@@ -419,7 +477,7 @@ var rubio = {
 var clinton = {
   info: {name: "Hillary Clinton", affiliation: "Democratic Party", position: "Former Secretary of State", experience: "12 years"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 2,
   healthcare: 5,
   energy: 5,
@@ -444,7 +502,7 @@ var clinton = {
 var kasich = {
   info: {name: "John Kasich", affiliation: "Republican Party", position: "Governor of Ohio", experience: "26 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 4,
   healthcare: 2,
   energy: 2,
@@ -469,7 +527,7 @@ var kasich = {
 var cruz = {
   info: {name: "Ted Cruz", affiliation: "Republican Party", position: "U.S. Senator", experience: "2 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 5,
   healthcare: 1,
   energy: 1,
@@ -494,7 +552,7 @@ var cruz = {
 var stein = {
   info: {name: "Jill Stein", affiliation: "Green Party", position: "Physician", experience: "Never held office"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 1,
   healthcare: 5,
   energy: 5,
