@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('div').hide();
-  $('.tinder').hide();
-  $('.buttons').hide();
+  // $('.tinder').hide();
+  // $('.buttons').hide();
 
   // Animate 'Find My Ideal Candidate' button
   $('.enter-button').mouseenter(function() {
@@ -15,16 +15,20 @@ $(document).ready(function(){
     $(this).animate({height: '-=15px', width: '-=15px'});
       });
 
-  // Go to Overview page
+  // Go to Overview page when 'Find My Perfect Candidate' is clicked
   $('.enter-button').on('click', function(){
-    $('.landing').slideUp();
     $('div').show();
+    $('.tinder').hide();
+    $('.buttons').hide();
+    $('.results').hide();
+    $('.landing').slideUp();
   });
 
   // Go to first issue page
   $('.start-button').on('click', function(){
     $('.about-main').slideUp(1000);
     $('.guns').show();
+    $('.gun-buttons').show();
     $('.top-bar').animate({'margin':'1.5% 0 0 0'}, 1000);
     $('.img-circle').animate({'height':'100px','width':'100px'}, 1000);
   });
@@ -48,6 +52,7 @@ $(document).ready(function(){
     };
     $('.guns').slideUp();
     $('.crime').fadeIn();
+    $('.crime-buttons').show();
   });
 
   $('.crime-button').click(function() {
@@ -62,6 +67,7 @@ $(document).ready(function(){
     };
     $('.crime').slideUp();
     $('.healthcare').fadeIn();
+    $('.healthcare-buttons').show();
   });
 
   $('.healthcare-button').click(function(){
@@ -76,6 +82,8 @@ $(document).ready(function(){
     };
     $('.healthcare').slideUp();
     $('.energy').fadeIn();
+    $('.energy-buttons').show();
+
   });
 
   $('.energy-button').click(function(){
@@ -90,6 +98,7 @@ $(document).ready(function(){
     };
     $('.energy').slideUp();
     $('.drugs').fadeIn();
+    $('.drugs-buttons').show();
   });
 
   $('.drugs-button').click(function(){
@@ -104,6 +113,7 @@ $(document).ready(function(){
     };
     $('.drugs').slideUp();
     $('.taxes').fadeIn();
+    $('.taxes-buttons').show();
   });
 
   $('.taxes-button').click(function(){
@@ -118,6 +128,7 @@ $(document).ready(function(){
     };
     $('.taxes').slideUp();
     $('.immigration').fadeIn();
+    $('.immigration-buttons').show();
   });
 
   $('.immigration-button').click(function(){
@@ -132,6 +143,7 @@ $(document).ready(function(){
     };
     $('.immigration').slideUp();
     $('.ss').fadeIn();
+    $('.ss-buttons').show();
   });
 
   $('.ss-button').click(function(){
@@ -146,6 +158,7 @@ $(document).ready(function(){
     };
     $('.ss').slideUp();
     $('.military').fadeIn();
+    $('.military-buttons').show();
   });
 
   $('.military-button').click(function(){
@@ -160,6 +173,7 @@ $(document).ready(function(){
     };
     $('.military').slideUp();
     $('.fp').fadeIn();
+    $('.fp-buttons').show();
   });
 
   $('.fp-button').click(function(){
@@ -174,6 +188,7 @@ $(document).ready(function(){
     };
     $('.fp').slideUp();
     $('.tpp').fadeIn();
+    $('.tpp-buttons').show();
   });
 
   $('.tpp-button').click(function(){
@@ -188,6 +203,7 @@ $(document).ready(function(){
     };
     $('.tpp').slideUp();
     $('.marriage').fadeIn();
+    $('.marriage-buttons').show();
   });
 
   $('.marriage-button').click(function(){
@@ -202,6 +218,7 @@ $(document).ready(function(){
     };
     $('.marriage').slideUp();
     $('.religion').fadeIn();
+    $('.religion-buttons').show();
   });
 
   $('.religion-button').click(function(){
@@ -216,6 +233,7 @@ $(document).ready(function(){
     };
     $('.religion').slideUp();
     $('.epa').fadeIn();
+    $('.epa-buttons').show();
   });
 
   $('.epa-button').click(function(){
@@ -230,6 +248,7 @@ $(document).ready(function(){
     };
     $('.epa').slideUp();
     $('.voting').fadeIn();
+    $('.voting-buttons').show();
   });
 
   $('.voting-button').click(function(){
@@ -244,6 +263,7 @@ $(document).ready(function(){
     };
     $('.voting').slideUp();
     $('.nsa').fadeIn();
+    $('.nsa-buttons').show();
   });
 
   $('.nsa-button').click(function(){
@@ -258,6 +278,7 @@ $(document).ready(function(){
     };
     $('.nsa').slideUp();
     $('.wages').fadeIn();
+    $('.wages-buttons').show();
   });
 
   $('.wages-button').click(function(){
@@ -272,6 +293,7 @@ $(document).ready(function(){
     };
     $('.wages').slideUp();
     $('.citizens').fadeIn();
+    $('.citizens-buttons').show();
   });
 
   $('.citizens-button').click(function(){
@@ -286,6 +308,7 @@ $(document).ready(function(){
     };
     $('.citizens').slideUp();
     $('.abortion').fadeIn('slow');
+    $('.abortion-buttons').show();
   });
 
   $('.abortion-button').click(function(){
@@ -305,7 +328,7 @@ $(document).ready(function(){
 
     $('.abortion').slideUp();
     $('.head-bar').slideUp();
-    $('.match').fadeIn('slow');
+    $('.results').fadeIn('slow');
     // Adds candidate pictures to match table
     $('.match-pic-1').append('<img class="match" src=' + candidates[0].image +'>');
     $('.match-pic-2').append('<img class="match" src=' + candidates[1].image +'>');
