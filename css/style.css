@@ -52,7 +52,6 @@ header h3 {
   margin-top: 2%;
 }
 
-/*Tinder-style profile*/
 .tinder {
   max-width: 37%;
   height: 390px;
@@ -164,17 +163,18 @@ header h3 {
   text-align: center;
 }
 
-.match h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: 26px;
-  text-align: center;
-}
-
 img.match {
   height: 150px;
   width: 150px;
   border-radius: 8px;
+}
+
+h2.match {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: rgb(200, 56, 53);
+    font-size: 42px;
+    text-align: center
 }
 
 h4.match {
@@ -182,11 +182,16 @@ h4.match {
     background-color: white;
     color: rgb(17, 49, 120);
     font-size: 32px;
+    text-align: center;
 }
 
 p.match {
   background-color: white;
   color: rgb(17, 49, 120);
-  font-size: 24px;
+  font-size: 12px;
   text-align: center;
+}
+
+td {
+  vertical-align: middle !important;
 }

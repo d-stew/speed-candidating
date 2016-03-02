@@ -255,13 +255,17 @@ $(document).ready(function(){
     $('.match-pic-4').append('<img class="match" src=' + candidates[3].image +'>');
     $('.match-pic-5').append('<img class="match" src=' + candidates[4].image +'>');
     // Add candidate names & info to match table
-    $('.match-info-1').append('<h4 class="match">' + candidates[0].name + '</h4>');
-    $('.match-info-2').append('<h4 class="match">' + candidates[1].name + '</h4>');
-    $('.match-info-3').append('<h4 class="match">' + candidates[2].name + '</h4>');
-    $('.match-info-4').append('<h4 class="match">' + candidates[3].name + '</h4>');
-    $('.match-info-5').append('<h4 class="match">' + candidates[4].name + '</h4>');
+    $('.match-info-1').prepend('<h4 class="match">' + candidates[0].info.name + '</h4>');
+    $('.match-info-2').prepend('<h4 class="match">' + candidates[1].info.name + '</h4>');
+    $('.match-info-3').prepend('<h4 class="match">' + candidates[2].info.name + '</h4>');
+    $('.match-info-4').prepend('<h4 class="match">' + candidates[3].info.name + '</h4>');
+    $('.match-info-5').prepend('<h4 class="match">' + candidates[4].info.name + '</h4>');
 
-    $('.match-info').append('<p class="match">You agreed on <b>' + candidates[0].matchScore + ' out of 19</b> issues.</p>');
+    $('.match-score-1').prepend('<h2 class="match">'+ ((candidates[0].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-2').prepend('<h2 class="match">'+ ((candidates[1].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-4').prepend('<h2 class="match">'+ ((candidates[3].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-5').prepend('<h2 class="match">'+ ((candidates[4].matchScore / 19)*100).toFixed() +'%</h2>');
   });
 
 });
@@ -270,7 +274,7 @@ $(document).ready(function(){
 // Candidate profiles
 
 var trump = {
-  name: "Donald Trump",
+  info: {name: "Donald Trump", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 5,
   crime: 5,
@@ -295,7 +299,7 @@ var trump = {
 };
 
 var sanders = {
-  name: "Bernie Sanders",
+  info: {name: "Bernie Sanders", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 3,
   crime: 1,
@@ -320,7 +324,7 @@ var sanders = {
 };
 
 var carson = {
-  name: "Ben Carson",
+  info: {name: "Ben Carson", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 1,
   crime: 2,
@@ -345,7 +349,7 @@ var carson = {
 };
 
 var johnson = {
-  name: "Gary Johnson",
+  info: {name: "Gary Johnson", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 5,
   crime: 2,
@@ -370,7 +374,7 @@ var johnson = {
 };
 
 var rubio = {
-  name: "Marco Rubio",
+  info: {name: "Marco Rubio", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 1,
   crime: 5,
@@ -395,7 +399,7 @@ var rubio = {
 };
 
 var clinton = {
-  name: "Hillary Clinton",
+  info: {name: "Hillary Clinton", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 5,
   crime: 2,
@@ -420,7 +424,7 @@ var clinton = {
 };
 
 var kasich = {
-  name: "John Kasich",
+  info: {name: "John Kasich", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 1,
   crime: 4,
@@ -445,7 +449,7 @@ var kasich = {
 };
 
 var cruz = {
-  name: "Ted Cruz",
+  info: {name: "Ted Cruz", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 1,
   crime: 5,
@@ -470,7 +474,7 @@ var cruz = {
 };
 
 var stein = {
-  name: "Jill Stein",
+  info: {name: "Jill Stein", affiliation: "", position: "", experience: ""},
   matchScore: 0,
   guns: 5,
   crime: 1,
