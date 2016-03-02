@@ -1,7 +1,11 @@
 $(document).ready(function(){
+
+localStorage.setItem('avg', '20%');
+console.log('avg', localStorage.getItem('avg'));
+
   $('div').hide();
-  $('.tinder').hide();
-  $('.buttons').hide();
+  // $('.tinder').hide();
+  // $('.buttons').hide();
 
   // Animate 'Find My Ideal Candidate' button
   $('.enter-button').mouseenter(function() {
@@ -15,32 +19,44 @@ $(document).ready(function(){
     $(this).animate({height: '-=15px', width: '-=15px'});
       });
 
-  // Go to Overview page
+  // Go to Overview page when 'Find My Perfect Candidate' is clicked
   $('.enter-button').on('click', function(){
-    $('.landing').slideUp();
     $('div').show();
+    $('.tinder').hide();
+    $('.buttons').hide();
+    $('.results').hide();
+    $('.landing').slideUp();
   });
 
   // Go to first issue page
   $('.start-button').on('click', function(){
     $('.about-main').slideUp(1000);
     $('.guns').show();
+    $('.gun-buttons').show();
     $('.top-bar').animate({'margin':'1.5% 0 0 0'}, 1000);
     $('.img-circle').animate({'height':'100px','width':'100px'}, 1000);
   });
 
-  // Object object to store user responses
+  // Object to store user responses
   var user = {};
 
+  // Beginning of policy evaluations
   $('.gun-button').click(function(){
+    // Stores response in user object
     user.guns = this.value;
     for (var i = 0; i < candidates.length; i++) {
+      // Adds 1 to match score if candidate and user have exact match
       if(this.value == candidates[i].guns) {
         candidates[i].matchScore += 1;
+      };
+      // Adds 0.5 to match score if candidate and user have soft match
+      if(Math.abs(this.value - candidates[i].guns) === 1) {
+        candidates[i].matchScore += 0.5;
       };
     };
     $('.guns').slideUp();
     $('.crime').fadeIn();
+    $('.crime-buttons').show();
   });
 
   $('.crime-button').click(function() {
@@ -49,9 +65,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].crime) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].crime) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.crime').slideUp();
     $('.healthcare').fadeIn();
+    $('.healthcare-buttons').show();
   });
 
   $('.healthcare-button').click(function(){
@@ -60,9 +80,14 @@ $(document).ready(function(){
       if(this.value == candidates[i].healthcare) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].healthcare) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.healthcare').slideUp();
     $('.energy').fadeIn();
+    $('.energy-buttons').show();
+
   });
 
   $('.energy-button').click(function(){
@@ -71,9 +96,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].energy) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].energy) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.energy').slideUp();
     $('.drugs').fadeIn();
+    $('.drugs-buttons').show();
   });
 
   $('.drugs-button').click(function(){
@@ -82,9 +111,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].drugs) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].drugs) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.drugs').slideUp();
     $('.taxes').fadeIn();
+    $('.taxes-buttons').show();
   });
 
   $('.taxes-button').click(function(){
@@ -93,9 +126,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].taxes) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].taxes) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.taxes').slideUp();
     $('.immigration').fadeIn();
+    $('.immigration-buttons').show();
   });
 
   $('.immigration-button').click(function(){
@@ -104,9 +141,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].immigration) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].immigration) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.immigration').slideUp();
     $('.ss').fadeIn();
+    $('.ss-buttons').show();
   });
 
   $('.ss-button').click(function(){
@@ -115,9 +156,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].ss) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].ss) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.ss').slideUp();
     $('.military').fadeIn();
+    $('.military-buttons').show();
   });
 
   $('.military-button').click(function(){
@@ -126,9 +171,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].military) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].military) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.military').slideUp();
     $('.fp').fadeIn();
+    $('.fp-buttons').show();
   });
 
   $('.fp-button').click(function(){
@@ -137,9 +186,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].fp) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].fp) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.fp').slideUp();
     $('.tpp').fadeIn();
+    $('.tpp-buttons').show();
   });
 
   $('.tpp-button').click(function(){
@@ -148,9 +201,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].tpp) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].tpp) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.tpp').slideUp();
     $('.marriage').fadeIn();
+    $('.marriage-buttons').show();
   });
 
   $('.marriage-button').click(function(){
@@ -159,9 +216,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].marriage) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].marriage) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.marriage').slideUp();
     $('.religion').fadeIn();
+    $('.religion-buttons').show();
   });
 
   $('.religion-button').click(function(){
@@ -170,9 +231,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].religion) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].religion) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.religion').slideUp();
     $('.epa').fadeIn();
+    $('.epa-buttons').show();
   });
 
   $('.epa-button').click(function(){
@@ -181,9 +246,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].epa) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].epa) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.epa').slideUp();
     $('.voting').fadeIn();
+    $('.voting-buttons').show();
   });
 
   $('.voting-button').click(function(){
@@ -192,9 +261,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].voting) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].voting) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.voting').slideUp();
     $('.nsa').fadeIn();
+    $('.nsa-buttons').show();
   });
 
   $('.nsa-button').click(function(){
@@ -203,9 +276,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].nsa) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].nsa) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.nsa').slideUp();
     $('.wages').fadeIn();
+    $('.wages-buttons').show();
   });
 
   $('.wages-button').click(function(){
@@ -214,9 +291,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].wages) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].wages) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.wages').slideUp();
     $('.citizens').fadeIn();
+    $('.citizens-buttons').show();
   });
 
   $('.citizens-button').click(function(){
@@ -225,9 +306,13 @@ $(document).ready(function(){
       if(this.value == candidates[i].citizens) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].citizens) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
     $('.citizens').slideUp();
     $('.abortion').fadeIn('slow');
+    $('.abortion-buttons').show();
   });
 
   $('.abortion-button').click(function(){
@@ -236,22 +321,66 @@ $(document).ready(function(){
       if(this.value == candidates[i].abortion) {
         candidates[i].matchScore += 1;
       };
+      if(Math.abs(this.value - candidates[i].abortion) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
     };
+    // Sorts candidates by match score
     candidates.sort(function(a,b) {
 			return  b.matchScore - a.matchScore;
 		});
+
     $('.abortion').slideUp();
     $('.head-bar').slideUp();
-    $('.match').fadeIn('slow');
-    $('.match-pic').append('<img class="match" src=' + candidates[0].image +'>');
-    $('.match-info').append('<h2 class="match">' + candidates[0].name + '!</h2>');
-    $('.match-info').append('<p class="match">You agreed on <b>' + candidates[0].matchScore + ' out of 19</b> issues.</p>');
+    $('.results').fadeIn('slow');
+    // Adds candidate pictures to match table
+    $('.match-pic-1').append('<img class="match" src=' + candidates[0].image +'>');
+    $('.match-pic-2').append('<img class="match" src=' + candidates[1].image +'>');
+    $('.match-pic-3').append('<img class="match" src=' + candidates[2].image +'>');
+    $('.match-pic-4').append('<img class="match" src=' + candidates[3].image +'>');
+    $('.match-pic-5').append('<img class="match" src=' + candidates[4].image +'>');
+    // Add candidate names & info to match table
+    $('.match-info-1').prepend('<h4 class="match">' + candidates[0].info.name + '</h4>');
+    $('.match-info-2').prepend('<h4 class="match">' + candidates[1].info.name + '</h4>');
+    $('.match-info-3').prepend('<h4 class="match">' + candidates[2].info.name + '</h4>');
+    $('.match-info-4').prepend('<h4 class="match">' + candidates[3].info.name + '</h4>');
+    $('.match-info-5').prepend('<h4 class="match">' + candidates[4].info.name + '</h4>');
+    // Add candidate compatibility score to match table
+    $('.match-score-1').prepend('<h2 class="match">'+ ((candidates[0].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-2').prepend('<h2 class="match">'+ ((candidates[1].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-4').prepend('<h2 class="match">'+ ((candidates[3].matchScore / 19)*100).toFixed() +'%</h2>');
+    $('.match-score-5').prepend('<h2 class="match">'+ ((candidates[4].matchScore / 19)*100).toFixed() +'%</h2>');
+  
+    // localStorage.setItem('avgHillary', ((candidates[0].matchScore / 19)*100).toFixed() * localStorage.getItem('avgHillary'))
+
+    // Add candidate affiliation to match table
+    $('.affiliation-1').append(' ' + candidates[0].info.affiliation);
+    $('.affiliation-2').append(' ' + candidates[1].info.affiliation);
+    $('.affiliation-3').append(' ' + candidates[2].info.affiliation);
+    $('.affiliation-4').append(' ' + candidates[3].info.affiliation);
+    $('.affiliation-5').append(' ' + candidates[4].info.affiliation);
+    // Add candidate position to match table
+    $('.position-1').append(' ' + candidates[0].info.position);
+    $('.position-2').append(' ' + candidates[1].info.position);
+    $('.position-3').append(' ' + candidates[2].info.position);
+    $('.position-4').append(' ' + candidates[3].info.position);
+    $('.position-5').append(' ' + candidates[4].info.position);
+    // Add candidate experience to match table
+    $('.experience-1').append(' ' + candidates[0].info.experience);
+    $('.experience-2').append(' ' + candidates[1].info.experience);
+    $('.experience-3').append(' ' + candidates[2].info.experience);
+    $('.experience-4').append(' ' + candidates[3].info.experience);
+    $('.experience-5').append(' ' + candidates[4].info.experience);
   });
 
 });
 
+
+// Candidate profiles
+
 var trump = {
-  name: "Donald Trump",
+  info: {name: "Donald Trump", affiliation: "Republican Party", position: "President, Trump Organization", experience: "Never held office"},
   matchScore: 0,
   guns: 5,
   crime: 5,
@@ -276,7 +405,7 @@ var trump = {
 };
 
 var sanders = {
-  name: "Bernie Sanders",
+  info: {name: "Bernie Sanders", affiliation: "Democratic Party", position: "U.S. Senator (Vermont)", experience: "34 years"},
   matchScore: 0,
   guns: 3,
   crime: 1,
@@ -301,9 +430,9 @@ var sanders = {
 };
 
 var carson = {
-  name: "Ben Carson",
+  info: {name: "Ben Carson", affiliation: "Republican Party", position: "Former Neurosurgeon", experience: "Never held office"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 2,
   healthcare: 2,
   energy: 2,
@@ -326,7 +455,7 @@ var carson = {
 };
 
 var johnson = {
-  name: "Gary Johnson",
+  info: {name: "Gary Johnson", affiliation: "Libertarian Party", position: "Former Governor of New Mexico", experience: "8 years"},
   matchScore: 0,
   guns: 5,
   crime: 2,
@@ -351,9 +480,9 @@ var johnson = {
 };
 
 var rubio = {
-  name: "Marco Rubio",
+  info: {name: "Marco Rubio", affiliation: "Republican Party", position: "U.S. Senator (Florida)", experience: "15 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 5,
   healthcare: 2,
   energy: 2,
@@ -376,9 +505,9 @@ var rubio = {
 };
 
 var clinton = {
-  name: "Hillary Clinton",
+  info: {name: "Hillary Clinton", affiliation: "Democratic Party", position: "Former Secretary of State", experience: "12 years"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 2,
   healthcare: 5,
   energy: 5,
@@ -401,9 +530,9 @@ var clinton = {
 };
 
 var kasich = {
-  name: "John Kasich",
+  info: {name: "John Kasich", affiliation: "Republican Party", position: "Governor of Ohio", experience: "26 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 4,
   healthcare: 2,
   energy: 2,
@@ -426,9 +555,9 @@ var kasich = {
 };
 
 var cruz = {
-  name: "Ted Cruz",
+  info: {name: "Ted Cruz", affiliation: "Republican Party", position: "U.S. Senator", experience: "2 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 5,
   healthcare: 1,
   energy: 1,
@@ -451,9 +580,9 @@ var cruz = {
 };
 
 var stein = {
-  name: "Jill Stein",
+  info: {name: "Jill Stein", affiliation: "Green Party", position: "Physician", experience: "Never held office"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 1,
   healthcare: 5,
   energy: 5,
