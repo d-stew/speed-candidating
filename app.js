@@ -4,6 +4,8 @@ localStorage.setItem('avg', '20%');
 console.log('avg', localStorage.getItem('avg'));
 
   $('div').hide();
+  $('.issue-info-right').hide();
+  $('.issue-info-left').hide();
 
   // Animate 'Find My Ideal Candidate' button
   $('.enter-button').mouseenter(function() {
@@ -37,6 +39,11 @@ console.log('avg', localStorage.getItem('avg'));
 
   // Object to store user responses
   var user = {};
+
+  $('.glyphicon').hover(function(){
+    $('.issue-info-right').toggle();
+    $('.issue-info-left').toggle();
+  });
 
   // Beginning of policy evaluations
   $('.gun-button').click(function(){

@@ -1,3 +1,20 @@
+.issue-info-left {
+  height: 50%;
+  width: 25%;
+  color: rgb(200, 56, 53);
+  position: absolute;
+  left: 3%;
+}
+
+
+.issue-info-right {
+  height: 50%;
+  width: 25%;
+  color: rgb(17, 49, 120);
+  position: absolute;
+  right: 3%;
+}
+
 #flagBanner {
   margin-bottom: -30px;
 }
