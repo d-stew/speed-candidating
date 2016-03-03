@@ -375,7 +375,7 @@ console.log('avg', localStorage.getItem('avg'));
 var trump = {
   info: {name: "Donald Trump", affiliation: "Republican Party", position: "President, Trump Organization", experience: "Never held office"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 5,
   healthcare: 2,
   energy: 1,
@@ -425,7 +425,7 @@ var sanders = {
 var carson = {
   info: {name: "Ben Carson", affiliation: "Republican Party", position: "Former Neurosurgeon", experience: "Never held office"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 2,
   healthcare: 2,
   energy: 2,
@@ -450,7 +450,7 @@ var carson = {
 var johnson = {
   info: {name: "Gary Johnson", affiliation: "Libertarian Party", position: "Former Governor of New Mexico", experience: "8 years"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 2,
   healthcare: 1,
   energy: 2,
@@ -475,7 +475,7 @@ var johnson = {
 var rubio = {
   info: {name: "Marco Rubio", affiliation: "Republican Party", position: "U.S. Senator (Florida)", experience: "15 years"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 5,
   healthcare: 2,
   energy: 2,
@@ -500,7 +500,7 @@ var rubio = {
 var clinton = {
   info: {name: "Hillary Clinton", affiliation: "Democratic Party", position: "Former Secretary of State", experience: "12 years"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 2,
   healthcare: 5,
   energy: 5,
@@ -525,7 +525,7 @@ var clinton = {
 var kasich = {
   info: {name: "John Kasich", affiliation: "Republican Party", position: "Governor of Ohio", experience: "26 years"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 4,
   healthcare: 2,
   energy: 2,
@@ -550,7 +550,7 @@ var kasich = {
 var cruz = {
   info: {name: "Ted Cruz", affiliation: "Republican Party", position: "U.S. Senator", experience: "2 years"},
   matchScore: 0,
-  guns: 5,
+  guns: 1,
   crime: 5,
   healthcare: 1,
   energy: 1,
@@ -575,7 +575,7 @@ var cruz = {
 var stein = {
   info: {name: "Jill Stein", affiliation: "Green Party", position: "Physician", experience: "Never held office"},
   matchScore: 0,
-  guns: 1,
+  guns: 5,
   crime: 1,
   healthcare: 5,
   energy: 5,
