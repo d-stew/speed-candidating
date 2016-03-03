@@ -618,4 +618,4 @@ var stein = {
   image: "images/stein.jpg"
 };
 
-var candidates = [trump,sanders,carson,johnson,rubio,clinton,kasich,cruz,stein]
+var candidates = [trump,sanders,johnson,rubio,clinton,kasich,cruz,stein]
