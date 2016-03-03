@@ -456,31 +456,6 @@ var sanders = {
   image: "images/sanders.jpg"
 };
 
-var carson = {
-  info: {name: "Ben Carson", affiliation: "Republican Party", position: "Former Neurosurgeon", experience: "Never held office"},
-  matchScore: 0,
-  guns: 1,
-  crime: 2,
-  healthcare: 2,
-  energy: 2,
-  drugs: 1,
-  taxes: 1,
-  immigration: 2,
-  ss: 5,
-  military: 4,
-  fp: 2,
-  tpp: 4,
-  marriage: 2,
-  religion: 5,
-  epa: 2,
-  voting: 3,
-  nsa: 4,
-  wages: 2,
-  citizens: 3,
-  abortion: 1,
-  image: "images/carson.jpg"
-};
-
 var johnson = {
   info: {name: "Gary Johnson", affiliation: "Libertarian Party", position: "Former Governor of New Mexico", experience: "8 years"},
   matchScore: 0,
