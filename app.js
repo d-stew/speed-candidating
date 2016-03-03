@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-localStorage.setItem('avg', '20%');
-console.log('avg', localStorage.getItem('avg'));
-
   $('div').hide();
   $('.issue-info-right').hide();
   $('.issue-info-left').hide();
@@ -40,6 +37,7 @@ console.log('avg', localStorage.getItem('avg'));
   // Object to store user responses
   var user = {};
 
+  // Toggles extra info on hover
   $('.glyphicon').hover(function(){
     $('.issue-info-right').toggle();
     $('.issue-info-left').toggle();
@@ -360,14 +358,22 @@ console.log('avg', localStorage.getItem('avg'));
         candidates[i].matchScore += 0.5;
       };
     };
+
     // Sorts candidates by match score
     candidates.sort(function(a,b) {
       return  b.matchScore - a.matchScore;
     });
 
+    localStorage.setItem('matchScore', candidates[0].matchScore)
+    localStorage.setItem('matchName', candidates[0].info.name)
+    localStorage.setItem('matchAffiliation', candidates[0].info.affiliation)
+    localStorage.setItem('matchPosition', candidates[0].info.position)
+    localStorage.setItem('matchExperience', candidates[0].info.experience)
+
     $('.aa').slideUp();
     $('.head-bar').slideUp();
     $('.results').fadeIn('slow');
+    
     // Adds candidate pictures to match table
     $('.match-pic-1').append('<img class="match" src=' + candidates[0].image +'>');
     $('.match-pic-2').append('<img class="match" src=' + candidates[1].image +'>');
@@ -380,9 +386,6 @@ console.log('avg', localStorage.getItem('avg'));
     $('.match-score-1').prepend('<h2 class="match">'+ ((candidates[0].matchScore / 21)*100).toFixed() +'%</h2>');
     $('.match-score-2').prepend('<h2 class="match">'+ ((candidates[1].matchScore / 21)*100).toFixed() +'%</h2>');
     $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 21)*100).toFixed() +'%</h2>');
-
-    // localStorage.setItem('avgHillary', ((candidates[0].matchScore / 19)*100).toFixed() * localStorage.getItem('avgHillary'))
-
     // Add candidate affiliation to match table
     $('.affiliation-1').append(' ' + candidates[0].info.affiliation);
     $('.affiliation-2').append(' ' + candidates[1].info.affiliation);

@@ -51,6 +51,26 @@ h3 {
   margin: 1% 0 0 3.3%;
 }
 
+.prev-match {
+  font-size: 14.5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(17, 49, 120);
+  padding: 8px 22.5px;
+  margin: 1% 0 0 3.3%;
+}
+
+.about-link {
+  font-size: 14.5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(17, 49, 120);
+  padding: 10px 22.5px;
+  margin: 1% 0 0 0%;
+}
+
 .center-block {
   display: block;
   margin-left: auto;
