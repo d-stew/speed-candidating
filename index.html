@@ -1,561 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta property="og:url"                content="http://d-stew.github.io/personal-project-q1"/>
-    <meta property="og:title"              content="Speed CandiDating"/>
-    <meta property="og:description"        content="Don't know who to vote for? We can help."/>
-    <meta property="og:image"              content="http://i.imgur.com/TPJKa6T.png" />
-    <meta property="fb:app_id"             content="232121383803073"/>
-    <meta property="og:type"               content="website"/>
 
-    <title>SPEED candiDATING</title>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:url" content="http://d-stew.github.io/personal-project-q1" />
+  <meta property="og:title" content="Speed CandiDating" />
+  <meta property="og:description" content="Don't know who to vote for? We can help." />
+  <meta property="og:image" content="http://i.imgur.com/TPJKa6T.png" />
+  <meta property="fb:app_id" content="232121383803073" />
+  <meta property="og:type" content="website" />
 
-  <body>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '232121383803073',
-          xfbml      : true,
-          version    : 'v2.5'
-        });
-      };
+  <title>SPEED candiDATING</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
 
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/all.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: '232121383803073',
+        xfbml: true,
+        version: 'v2.5'
+      });
+    };
 
-    <header class="landing">
-      <img alt="Banner" src="images/flag.png" id="flagBanner">
-      <h3>It's Election Season!</h3>
-      <h1>Don't know who to vote for?</h1>
-      <h3>We make it easy to decide.</h3>
-      <br>
-      <button class="button enter-button">Find My Perfect Candidate</button>
-      <br>
-      <button class="button prev-match">View Previous Matches</button>
-      <a class="button about-link" href="about.html">About</a>
-    </header>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/all.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-    <div class="about">
+  <header class="landing">
+    <img alt="Banner" src="images/flag.png" id="flagBanner">
+    <h3>It's Election Season!</h3>
+    <h1>Don't know who to vote for?</h1>
+    <h3>We make it easy to decide.</h3>
+    <br>
+    <button class="button enter-button">Find My Perfect Candidate</button>
+    <br>
+    <button class="button prev-match">View Previous Matches</button>
+    <a class="button about-link" href="about.html">About</a>
+  </header>
 
-      <div class="top-bar">
-        <img src="images/speed.png" class="logo" id="speed">
-        <img src="images/candidating.png" class="logo" id="candidating">
-      </div>
+  <div class="about">
 
-      <div class="container-fluid about-main">
-        <h1>Here's how it works:</h1>
-        <h3>1.) We give you a policy stance</h3>
-        <h3>2.) For each stance, you tell us whether you agree or disagree</h3>
-        <h3>3.) We'll tell you which candidate best matches your views!</h3>
-        <h3>It's super easy. Ready?</h3>
-        <nav class="center-block">
-          <ul class="pager button start-button">
-            <li><a href="#">Go!</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="container-fluid text-center head-bar">
-        <img class="heads img-circle" src="images/trump.jpg">
-        <img class="heads img-circle" src="images/sanders.jpg">
-        <img class="heads img-circle" src="images/johnson.jpg">
-        <img class="heads img-circle" src="images/rubio.jpg">
-        <img class="heads img-circle" src="images/clinton.jpg">
-        <img class="heads img-circle" src="images/kasich.jpg">
-        <img class="heads img-circle" src="images/cruz.jpg">
-        <img class="heads img-circle" src="images/stein.jpg">
-      </div>
-
-    </div>
-    <div class="issues guns">
-      <section class="tinder guns" id="guns">
-        <p class="issue-info-left">Disagree: No law or regulation should interfere with our 2nd Amendment right to own and bears arms. Guns ultimately keep us safer.</p>
-        <div class="column">
-          <img src="images/issues/guncontrol.jpg">
-          <h3>More restrictions on gun sales/ownership</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: We should have bullet capacity limits, bans on assault-style weapons, stricter background checks and longer waiting times.</p>
-      </section>
-      <br>
-      <div class="buttons gun-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl gun-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl gun-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl gun-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl gun-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl gun-button">Strongly<br> Agree</button>
-      </div>
+    <div class="top-bar">
+      <img src="images/speed.png" class="logo" id="speed">
+      <img src="images/candidating.png" class="logo" id="candidating">
     </div>
 
-    <div class="issues crime">
-      <section class="tinder crime" id="crime">
-        <p class="issue-info-left">Disagree: The purpose of incarceration is rehabilitation, not punishment. Judges and juries should be free to decide what penalties apply in each particular case. The Death Penalty is "cruel and unusual" and should be abolished.</p>
-        <div class="column">
-          <img src="images/issues/crime.jpg">
-          <h3>Stricter punishment reduces crime</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Mandatory sentencing minimums make sure criminals don't get off too easy. The 'Three Strikes' rule puts dangerous repeat offenders where they belong - behind bars, for life. And the Death Penalty gets rid of them once and for all.</p>
-      </section>
-      <br>
-      <div class="buttons crime-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl crime-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl crime-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl crime-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl crime-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl crime-button">Strongly<br> Agree</button>
-      </div>
+    <div class="container-fluid about-main">
+      <h1>Here's how it works:</h1>
+      <h3>1.) We give you a policy stance</h3>
+      <h3>2.) For each stance, you tell us whether you agree or disagree</h3>
+      <h3>3.) We'll tell you which candidate best matches your views!</h3>
+      <h3>It's super easy. Ready?</h3>
+      <nav class="center-block">
+        <ul class="pager button start-button">
+          <li><a href="#">Go!</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <div class="issues healthcare">
-      <section class="tinder healthcare" id="healthcare">
-        <p class="issue-info-left">Disagree: A free-market system is the best way to get health coverage for more people. The federal government should not control such a large part of our economy or have access to our medical records.</p>
-        <div class="column">
-          <img src="images/issues/healthcare.jpg">
-          <h3>Expand the ACA (ObamaCare)</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: People have a fundamental right to health care, and the government should provide coverage or subsidize health-insurance for everybody.</p>
-      </section>
-      <br>
-      <div class="buttons healthcare-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl healthcare-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl healthcare-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl healthcare-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl healthcare-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl healthcare-button">Strongly<br> Agree</button>
-      </div>
+    <div class="container-fluid text-center head-bar">
+      <img class="heads img-circle" src="images/trump.jpg">
+      <img class="heads img-circle" src="images/sanders.jpg">
+      <img class="heads img-circle" src="images/johnson.jpg">
+      <img class="heads img-circle" src="images/rubio.jpg">
+      <img class="heads img-circle" src="images/clinton.jpg">
+      <img class="heads img-circle" src="images/kasich.jpg">
+      <img class="heads img-circle" src="images/cruz.jpg">
+      <img class="heads img-circle" src="images/stein.jpg">
     </div>
 
-    <div class="issues energy">
-      <section class="tinder energy" id="energy">
-        <p class="issue-info-left">Disagree: There is no such thing as global warming -- it's all natural climatic variation. We should not spend money trying to fix a problem that probably won't even affect us.</p>
-        <div class="column">
-          <img src="images/issues/energy.jpg">
-          <h3>Prioritize climate change/clean energy</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Climate change and global warming are serious problems caused by humans. We should end our dependence on fossil fuels and pursue sustainable energy alternatives.</p>
-      </section>
-      <br>
-      <div class="buttons energy-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl energy-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl energy-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl energy-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl energy-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl energy-button">Strongly<br> Agree</button>
+  </div>
+  <div class="issues guns">
+    <section class="tinder guns" id="guns">
+      <p class="issue-info-left">Disagree: No law or regulation should interfere with our 2nd Amendment right to own and bears arms. Guns ultimately keep us safer.</p>
+      <div class="column">
+        <img src="images/issues/guncontrol.jpg">
+        <h3>More restrictions on gun sales/ownership</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
       </div>
+      <p class="issue-info-right">Agree: We should have bullet capacity limits, bans on assault-style weapons, stricter background checks and longer waiting times.</p>
+    </section>
+    <br>
+    <div class="buttons gun-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl gun-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl gun-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl gun-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl gun-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl gun-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues crime">
+    <section class="tinder crime" id="crime">
+      <p class="issue-info-left">Disagree: The purpose of incarceration is rehabilitation, not punishment. Judges and juries should be free to decide what penalties apply in each particular case. The Death Penalty is "cruel and unusual" and should be abolished.</p>
+      <div class="column">
+        <img src="images/issues/crime.jpg">
+        <h3>Stricter punishment reduces crime</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Mandatory sentencing minimums make sure criminals don't get off too easy. The 'Three Strikes' rule puts dangerous repeat offenders where they belong - behind bars, for life. And the Death Penalty gets rid of them once and for all.</p>
+    </section>
+    <br>
+    <div class="buttons crime-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl crime-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl crime-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl crime-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl crime-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl crime-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues healthcare">
+    <section class="tinder healthcare" id="healthcare">
+      <p class="issue-info-left">Disagree: A free-market system is the best way to get health coverage for more people. The federal government should not control such a large part of our economy or have access to our medical records.</p>
+      <div class="column">
+        <img src="images/issues/healthcare.jpg">
+        <h3>Expand the ACA (ObamaCare)</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: People have a fundamental right to health care, and the government should provide coverage or subsidize health-insurance for everybody.</p>
+    </section>
+    <br>
+    <div class="buttons healthcare-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl healthcare-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl healthcare-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl healthcare-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl healthcare-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl healthcare-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues energy">
+    <section class="tinder energy" id="energy">
+      <p class="issue-info-left">Disagree: There is no such thing as global warming -- it's all natural climatic variation. We should not spend money trying to fix a problem that probably won't even affect us.</p>
+      <div class="column">
+        <img src="images/issues/energy.jpg">
+        <h3>Prioritize climate change/clean energy</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Climate change and global warming are serious problems caused by humans. We should end our dependence on fossil fuels and pursue sustainable energy alternatives.</p>
+    </section>
+    <br>
+    <div class="buttons energy-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl energy-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl energy-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl energy-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl energy-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl energy-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues drugs">
+    <section class="tinder drugs" id="drugs">
+      <p class="issue-info-left">Disagree: Drug use is immoral and drugs are a poison to our youth and our society. We can win with enough resources -- more police, more border patrols and harsher prison sentences.</p>
+      <div class="column">
+        <img src="images/issues/pot.jpg">
+        <h3>End the War on Drugs</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Drug abuse is a public health issue, not a criminal justice issue. Harsh drug laws disproportionately affect minorities and should be repealed. Marijuana should be decriminalized or legalized.</p>
+    </section>
+    <br>
+    <div class="buttons drugs-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl drugs-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl drugs-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl drugs-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl drugs-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl drugs-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues taxes">
+    <section class="tinder taxes" id="taxes">
+      <p class="issue-info-left">Disagree: Higher taxes hurt the economy, slow job creation and discourage people from starting or expanding their own businesses. Tax cuts for the wealthy actually end up helping those with lower incomes.</p>
+      <div class="column">
+        <img src="images/issues/taxes.jpg">
+        <h3>Raise taxes on corporations and the wealthy</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: The top 1% should not have more wealth than the bottom 99%. Progressive taxation is a cornerstone of society and the rich should pay a higher share of taxes. Tax loopholes that only benefit corporations must be closed.</p>
+    </section>
+    <br>
+    <div class="buttons taxes-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl taxes-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl taxes-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl taxes-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl taxes-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl taxes-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues immigration">
+    <section class="tinder immigration" id="immigration">
+      <p class="issue-info-left">Disagree: Illegal immigrants are criminals, and they should not be allowed in our country. We need to increase border security, deport illegal immigrants already here and remove all their social benefits.</p>
+      <div class="column">
+        <img src="images/issues/immigration.jpg">
+        <h3>Pathway to citizenship for illegal aliens</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Illegal aliens that prove themselves as productive members of society should be given citizenship. Immigration increases our diversity and ultimately helps our economy.</p>
+    </section>
+    <br>
+    <div class="buttons immigration-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl immigration-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl immigration-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl immigration-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl immigration-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl immigration-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues ss">
+    <section class="tinder ss" id="ss">
+      <p class="issue-info-left">Disagree: Social Security should remain under the control of the government to ensure all Americans have a secure retirement. Funds should not be exposed to risky investments.</p>
+      <div class="column">
+        <img src="images/issues/ss.jpg">
+        <h3>Privatize Social Security</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: The government should not be in charge of our retirement funds. Social Security should be run like Roth IRAs or other private pension plans, and individuals should have some control over their investments.</p>
+    </section>
+    <br>
+    <div class="buttons ss-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl ss-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl ss-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl ss-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl ss-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl ss-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues military">
+    <section class="tinder military" id="military">
+      <p class="issue-info-left">Disagree: Our military is already bigger than the rest of the world combined. That money could be much better spent on social programs or other domestic issues. An overly-large military just creates enemies and destroys our economy.</p>
+      <div class="column">
+        <img src="images/issues/military.jpg">
+        <h3>Expand the military</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: As a world leader, we have an obligation to maintain a strong military, especially as certain regions become even more unstable. More spending is also necessary to ensure our national security. </p>
+    </section>
+    <br>
+    <div class="buttons military-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl military-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl military-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl military-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl military-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl military-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues fp">
+    <section class="tinder fp" id="fp">
+      <p class="issue-info-left">Disagree: It is our right and duty to take military action abroad when our national interests are threatened. We also have a responsibility to protect our allies by any means necessary.</p>
+      <div class="column">
+        <img src="images/issues/fp.jpg">
+        <h3>Avoid foreign entanglements</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: The United States is not the world police. Wars are expensive and cost lives, and almost always cause more harm than good.</p>
+    </section>
+    <br>
+    <div class="buttons fp-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl fp-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl fp-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl fp-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl fp-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl fp-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues tpp">
+    <section class="tinder tpp" id="tpp">
+      <p class="issue-info-left">Disagree: The agreement drives income inequality, as most of the economic gains go to those making more than $88,000 a year. It also makes drugs more expensive by reducing the availability of generics and supersedes financial regulations.</p>
+      <div class="column">
+        <img src="images/issues/tpp.jpg">
+        <h3>Support the Trans-Pacific Partnership</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: The TPP boosts economic growth by removing tariffs on U.S. exports, with $77 billion of extra income going to U.S. workers. The agreement also cuts down on wildlife trafficking and prevents environmental abuses.</p>
+    </section>
+    <br>
+    <div class="buttons tpp-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl tpp-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl tpp-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl tpp-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl tpp-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl tpp-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues marriage">
+    <section class="tinder marriage" id="marriage">
+      <p class="issue-info-left">Disagree: Marriage is between a man and a woman. Allowing gays to marry would hurt the institution of marriage and impose an immoral lifestyle on children.</p>
+      <div class="column">
+        <img src="images/issues/marriage.jpg">
+        <h3>Support same-sex marriage</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Gays have a constitutional right to Equal Protection under the law and should have the same rights and status as everyone else. The government has no right to discriminate based on sexual orientation.</p>
+    </section>
+    <br>
+    <div class="buttons marriage-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl marriage-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl marriage-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl marriage-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl marriage-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl marriage-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues religion">
+    <section class="tinder religion" id="religion">
+      <p class="issue-info-left">Disagree: Separation of church and state is essential. The government should not provide tax money to religious organizations, promote religion in public places or allow public school prayers.</p>
+      <div class="column">
+        <img src="images/issues/religion.jpg">
+        <h3>Keep God in the public sphere</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: America was founded on belief in God and Western law is based heavily off the Ten Commandments. We need religious values in our society, in our schools, and in our government.</p>
+    </section>
+    <br>
+    <div class="buttons religion-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl religion-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl religion-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl religion-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl religion-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl religion-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues epa">
+    <section class="tinder epa" id="epa">
+      <p class="issue-info-left">Disagree: Human needs come first, and Earth is our domain to do with as we see fit. Strict regulations hurt businesses and enforcing them is a waste of money.</p>
+      <div class="column">
+        <img src="images/issues/epa.jpg">
+        <h3>Stricter environmental regulations</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: We have to balance economic needs with environmental needs. Nature must be respected and protected, even if it places a burden on businesses and individuals.</p>
+    </section>
+    <br>
+    <div class="buttons epa-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl epa-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl epa-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl epa-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl epa-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl epa-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues voting">
+    <section class="tinder voting" id="voting">
+      <p class="issue-info-left">Disagree: Voter fraud undermines the process of democracy and we need to fight it. ID requirements for voting are perfectly reasonable.</p>
+      <div class="column">
+        <img src="images/issues/voting.jpg">
+        <h3>Make voter registration easier</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: We should make it easier to vote, not harder. Voter ID laws are mostly intended to suppress minority voting and don't actually stop voter fraud.</p>
+    </section>
+    <br>
+    <div class="buttons voting-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl voting-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl voting-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl voting-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl voting-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl voting-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues nsa">
+    <section class="tinder nsa" id="nsa">
+      <p class="issue-info-left">Disagree: If you have nothing to hide, you have nothing to worry about. NSA surveillance helps us fight terrorism by identifying threats before they become a problem.</p>
+      <div class="column">
+        <img src="images/issues/nsa.jpg">
+        <h3>End NSA surveillance/data collection</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Government surveillance is a violation of our constitutional rights. We should not give up our right to privacy in the name of national security.</p>
+    </section>
+    <br>
+    <div class="buttons nsa-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl nsa-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl nsa-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl nsa-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl nsa-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl nsa-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues wages">
+    <section class="tinder wages" id="wages">
+      <p class="issue-info-left">Disagree: Raising the minimum wage will make prices go up and jobs disappear, as many companies would have to offset increased labor costs. It would also reduce the incentive to pursue more education and move up to a higher-paying job.</p>
+      <div class="column">
+        <img src="images/issues/wages.jpg">
+        <h3>Increase the minimum wage</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Every citizens deserves to make a living wage. $7.25 an hour -- only $15,080 a year -- is unnaceptable for someone working full-time. Higher wages mean more spending, which helps our economy in the long run.</p>
+    </section>
+    <br>
+    <div class="buttons wages-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl wages-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl wages-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl wages-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl wages-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl wages-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues citizens">
+    <section class="tinder citizens" id="citizens">
+      <p class="issue-info-left">Disagree: Campaign donations are free speech, and should not be limited for corporations nor for individuals. As long as Super-PACs do not coordinate with campaigns themselves, they should be free to spend money as they see fit.</p>
+      <div class="column">
+        <img src="images/issues/citizens.jpg">
+        <h3>Overturn <i>Citizens United</i></h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Private funding of campaigns undermines democracy, as those with more money have more influence over the political process. Campaigns should be publicly funded to reduce the power of lobbyists and special interest groups.</p>
+    </section>
+    <br>
+    <div class="buttons citizens-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl citizens-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl citizens-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl citizens-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl citizens-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl citizens-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues abortion">
+    <section class="tinder abortion" id="abortion">
+      <p class="issue-info-left">Disagree: Abortion is immoral because it kills a human being, and should not be tolerated. A fetus has rights of its own -- including the right to life -- that cannot be violated.</p>
+      <div class="column">
+        <img src="images/issues/abortion.jpg">
+        <h3>Abortion is a woman's unrestricted right</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Abortion is a private decision between a woman and her doctor. The government has no business telling a woman what to do with her body. Women should have access to safe, legal abortions if they want to make that decision.</p>
+    </section>
+    <br>
+    <div class="buttons abortion-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl abortion-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl abortion-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl abortion-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl abortion-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl abortion-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues equalpay">
+    <section class="tinder equalpay" id="equalpay">
+      <p class="issue-info-left">Disagree: The wage gap is not sexism. Legally requiring equal pay just creates more government regulations and opens the door for lawsuits.</p>
+      <div class="column">
+        <img src="images/issues/equalpay.jpg">
+        <h3>Require equal pay for equal work</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: Women's median annual earnings are 77.5% of men's earnings. This is institutional sexism and we should require employers to pay men and women the same salary for the same job.</p>
+    </section>
+    <br>
+    <div class="buttons equalpay-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl equalpay-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl equalpay-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl equalpay-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl equalpay-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl equalpay-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="issues aa">
+    <section class="tinder aa" id="aa">
+      <p class="issue-info-left">Disagree: Legally requiring the hiring of minorities or women is just reverse discrimination. Quotas based on race or gender are wrong, regardless of who they benefit. The best person for the job should be hired, period.</p>
+      <div class="column">
+        <img src="images/issues/aa.jpg">
+        <h3>Support Affirmative Action programs</h3>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </div>
+      <p class="issue-info-right">Agree: We need to make up for past injustice. Until women and minorities are proportionately represented in the upper classes of society and the workplace, the government should give them a hand up.</p>
+    </section>
+    <br>
+    <div class="buttons aa-buttons">
+      <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl aa-button">Strongly
+        <br> Disagree</button>
+      <button type="button" value="2" class="btn disagree btn-circle btn-xl aa-button">Disagree</button>
+      <button type="button" value="3" class="btn neutral btn-circle btn-xl aa-button">Neutral</button>
+      <button type="button" value="4" class="btn agree btn-circle btn-xl aa-button">Agree</button>
+      <button type="button" value="5" class="btn strong-agree btn-circle btn-xl aa-button">Strongly
+        <br> Agree</button>
+    </div>
+  </div>
+
+  <div class="results">
+
+    <div class="match container-fluid">
+      <h1>It's a match!</h1>
+      <h4>Your top 3 candidates:</h4>
     </div>
 
-    <div class="issues drugs">
-      <section class="tinder drugs" id="drugs">
-        <p class="issue-info-left">Disagree: Drug use is immoral and drugs are a poison to our youth and our society. We can win with enough resources -- more police, more border patrols and harsher prison sentences.</p>
-        <div class="column">
-          <img src="images/issues/pot.jpg">
-          <h3>End the War on Drugs</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Drug abuse is a public health issue, not a criminal justice issue. Harsh drug laws disproportionately affect minorities and should be repealed. Marijuana should be decriminalized or legalized.</p>
-      </section>
-      <br>
-      <div class="buttons drugs-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl drugs-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl drugs-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl drugs-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl drugs-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl drugs-button">Strongly<br> Agree</button>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <table class="table match-table">
+          <tbody>
+            <tr>
+              <td class="match-pic-1"></td>
+              <td class="match-score match-score-1">
+                <p class="match">Compatibility
+                  <br>Score</p>
+              </td>
+              <td class="match-info-1">
+                <p class="match affiliation-1"><b>Affiliation:</b></p>
+                <p class="match position-1"><b>Current Position:</b></p>
+                <p class="match experience-1"><b>Political Experience:</b></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="match-pic-2"></td>
+              <td class="match-score match-score-2">
+                <p class="match">Compatibility
+                  <br>Score</p>
+              </td>
+              <td class="match-info-2">
+                <p class="match affiliation-2"><b>Affiliation:</b></p>
+                <p class="match position-2"><b>Current Position:</b></p>
+                <p class="match experience-2"><b>Political Experience:</b></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="match-pic-3"></td>
+              <td class="match-score match-score-3">
+                <p class="match">Compatibility
+                  <br>Score</p>
+              </td>
+              <td class="match-info-3">
+                <p class="match affiliation-3"><b>Affiliation:</b></p>
+                <p class="match position-3"><b>Current Position:</b></p>
+                <p class="match experience-3"><b>Political Experience:</b></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a class="links" href="about.html">About</a>
+        <a class="links" href="index.html">Home</a>
+        <div id='shareButton' class="fb-share-button" data-href="http://d-stew.github.io/personal-project-q1/" data-layout="button"></div>
       </div>
     </div>
+  </div>
 
-    <div class="issues taxes">
-      <section class="tinder taxes" id="taxes">
-        <p class="issue-info-left">Disagree: Higher taxes hurt the economy, slow job creation and discourage people from starting or expanding their own businesses. Tax cuts for the wealthy actually end up helping those with lower incomes.</p>
-        <div class="column">
-          <img src="images/issues/taxes.jpg">
-          <h3>Raise taxes on corporations and the wealthy</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: The top 1% should not have more wealth than the bottom 99%. Progressive taxation is a cornerstone of society and the rich should pay a higher share of taxes. Tax loopholes that only benefit corporations must be closed.</p>
-      </section>
-      <br>
-      <div class="buttons taxes-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl taxes-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl taxes-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl taxes-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl taxes-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl taxes-button">Strongly<br> Agree</button>
-      </div>
-    </div>
+</body>
+<script type="text/javascript" src="app.js"></script>
 
-    <div class="issues immigration">
-      <section class="tinder immigration" id="immigration">
-        <p class="issue-info-left">Disagree: Illegal immigrants are criminals, and they should not be allowed in our country. We need to increase border security, deport illegal immigrants already here and remove all their social benefits.</p>
-        <div class="column">
-          <img src="images/issues/immigration.jpg">
-          <h3>Pathway to citizenship for illegal aliens</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Illegal aliens that prove themselves as productive members of society should be given citizenship. Immigration increases our diversity and ultimately helps our economy.</p>
-      </section>
-      <br>
-      <div class="buttons immigration-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl immigration-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl immigration-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl immigration-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl immigration-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl immigration-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues ss">
-      <section class="tinder ss" id="ss">
-        <p class="issue-info-left">Disagree: Social Security should remain under the control of the government to ensure all Americans have a secure retirement. Funds should not be exposed to risky investments.</p>
-        <div class="column">
-          <img src="images/issues/ss.jpg">
-          <h3>Privatize Social Security</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: The government should not be in charge of our retirement funds. Social Security should be run like Roth IRAs or other private pension plans, and individuals should have some control over their investments.</p>
-      </section>
-      <br>
-      <div class="buttons ss-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl ss-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl ss-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl ss-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl ss-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl ss-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues military">
-      <section class="tinder military" id="military">
-        <p class="issue-info-left">Disagree: Our military is already bigger than the rest of the world combined. That money could be much better spent on social programs or other domestic issues. An overly-large military just creates enemies and destroys our economy.</p>
-        <div class="column">
-          <img src="images/issues/military.jpg">
-          <h3>Expand the military</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: As a world leader, we have an obligation to maintain a strong military, especially as certain regions become even more unstable. More spending is also necessary to ensure our national security. </p>
-      </section>
-      <br>
-      <div class="buttons military-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl military-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl military-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl military-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl military-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl military-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues fp">
-      <section class="tinder fp" id="fp">
-        <p class="issue-info-left">Disagree: It is our right and duty to take military action abroad when our national interests are threatened. We also have a responsibility to protect our allies by any means necessary.</p>
-        <div class="column">
-          <img src="images/issues/fp.jpg">
-          <h3>Avoid foreign entanglements</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: The United States is not the world police. Wars are expensive and cost lives, and almost always cause more harm than good.</p>
-      </section>
-      <br>
-      <div class="buttons fp-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl fp-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl fp-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl fp-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl fp-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl fp-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues tpp">
-      <section class="tinder tpp" id="tpp">
-        <p class="issue-info-left">Disagree: The agreement drives income inequality, as most of the economic gains go to those making more than $88,000 a year. It also makes drugs more expensive by reducing the availability of generics and supersedes financial regulations.</p>
-        <div class="column">
-          <img src="images/issues/tpp.jpg">
-          <h3>Support the Trans-Pacific Partnership</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: The TPP boosts economic growth by removing tariffs on U.S. exports, with $77 billion of extra income going to U.S. workers. The agreement also cuts down on wildlife trafficking and prevents environmental abuses.</p>
-      </section>
-      <br>
-      <div class="buttons tpp-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl tpp-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl tpp-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl tpp-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl tpp-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl tpp-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues marriage">
-      <section class="tinder marriage" id="marriage">
-        <p class="issue-info-left">Disagree: Marriage is between a man and a woman. Allowing gays to marry would hurt the institution of marriage and impose an immoral lifestyle on children.</p>
-        <div class="column">
-          <img src="images/issues/marriage.jpg">
-          <h3>Support same-sex marriage</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Gays have a constitutional right to Equal Protection under the law and should have the same rights and status as everyone else. The government has no right to discriminate based on sexual orientation.</p>
-      </section>
-      <br>
-      <div class="buttons marriage-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl marriage-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl marriage-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl marriage-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl marriage-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl marriage-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues religion">
-      <section class="tinder religion" id="religion">
-        <p class="issue-info-left">Disagree: Separation of church and state is essential. The government should not provide tax money to religious organizations, promote religion in public places or allow public school prayers.</p>
-        <div class="column">
-          <img src="images/issues/religion.jpg">
-          <h3>Keep God in the public sphere</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: America was founded on belief in God and Western law is based heavily off the Ten Commandments. We need religious values in our society, in our schools, and in our government.</p>
-      </section>
-      <br>
-      <div class="buttons religion-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl religion-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl religion-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl religion-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl religion-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl religion-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues epa">
-      <section class="tinder epa" id="epa">
-        <p class="issue-info-left">Disagree: Human needs come first, and Earth is our domain to do with as we see fit. Strict regulations hurt businesses and enforcing them is a waste of money.</p>
-        <div class="column">
-          <img src="images/issues/epa.jpg">
-          <h3>Stricter environmental regulations</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: We have to balance economic needs with environmental needs. Nature must be respected and protected, even if it places a burden on businesses and individuals.</p>
-      </section>
-      <br>
-      <div class="buttons epa-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl epa-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl epa-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl epa-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl epa-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl epa-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues voting">
-      <section class="tinder voting" id="voting">
-        <p class="issue-info-left">Disagree: Voter fraud undermines the process of democracy and we need to fight it. ID requirements for voting are perfectly reasonable.</p>
-        <div class="column">
-          <img src="images/issues/voting.jpg">
-          <h3>Make voter registration easier</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: We should make it easier to vote, not harder. Voter ID laws are mostly intended to suppress minority voting and don't actually stop voter fraud.</p>
-      </section>
-      <br>
-      <div class="buttons voting-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl voting-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl voting-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl voting-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl voting-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl voting-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues nsa">
-      <section class="tinder nsa" id="nsa">
-        <p class="issue-info-left">Disagree: If you have nothing to hide, you have nothing to worry about. NSA surveillance helps us fight terrorism by identifying threats before they become a problem.</p>
-        <div class="column">
-          <img src="images/issues/nsa.jpg">
-          <h3>End NSA surveillance/data collection</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Government surveillance is a violation of our constitutional rights. We should not give up our right to privacy in the name of national security.</p>
-      </section>
-      <br>
-      <div class="buttons nsa-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl nsa-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl nsa-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl nsa-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl nsa-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl nsa-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues wages">
-      <section class="tinder wages" id="wages">
-        <p class="issue-info-left">Disagree: Raising the minimum wage will make prices go up and jobs disappear, as many companies would have to offset increased labor costs. It would also reduce the incentive to pursue more education and move up to a higher-paying job.</p>
-        <div class="column">
-          <img src="images/issues/wages.jpg">
-          <h3>Increase the minimum wage</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Every citizens deserves to make a living wage. $7.25 an hour -- only $15,080 a year -- is unnaceptable for someone working full-time. Higher wages mean more spending, which helps our economy in the long run.</p>
-      </section>
-      <br>
-      <div class="buttons wages-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl wages-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl wages-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl wages-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl wages-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl wages-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues citizens">
-      <section class="tinder citizens" id="citizens">
-        <p class="issue-info-left">Disagree: Campaign donations are free speech, and should not be limited for corporations nor for individuals. As long as Super-PACs do not coordinate with campaigns themselves, they should be free to spend money as they see fit.</p>
-        <div class="column">
-          <img src="images/issues/citizens.jpg">
-          <h3>Overturn <i>Citizens United</i></h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Private funding of campaigns undermines democracy, as those with more money have more influence over the political process. Campaigns should be publicly funded to reduce the power of lobbyists and special interest groups.</p>
-      </section>
-      <br>
-      <div class="buttons citizens-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl citizens-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl citizens-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl citizens-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl citizens-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl citizens-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues abortion">
-      <section class="tinder abortion" id="abortion">
-        <p class="issue-info-left">Disagree: Abortion is immoral because it kills a human being, and should not be tolerated. A fetus has rights of its own -- including the right to life -- that cannot be violated.</p>
-        <div class="column">
-          <img src="images/issues/abortion.jpg">
-          <h3>Abortion is a woman's unrestricted right</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Abortion is a private decision between a woman and her doctor. The government has no business telling a woman what to do with her body. Women should have access to safe, legal abortions if they want to make that decision.</p>
-      </section>
-      <br>
-      <div class="buttons abortion-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl abortion-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl abortion-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl abortion-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl abortion-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl abortion-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues equalpay">
-      <section class="tinder equalpay" id="equalpay">
-        <p class="issue-info-left">Disagree: The wage gap is not sexism. Legally requiring equal pay just creates more government regulations and opens the door for lawsuits.</p>
-        <div class="column">
-          <img src="images/issues/equalpay.jpg">
-          <h3>Require equal pay for equal work</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: Women's median annual earnings are 77.5% of men's earnings. This is institutional sexism and we should require employers to pay men and women the same salary for the same job.</p>
-      </section>
-      <br>
-      <div class="buttons equalpay-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl equalpay-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl equalpay-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl equalpay-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl equalpay-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl equalpay-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="issues aa">
-      <section class="tinder aa" id="aa">
-        <p class="issue-info-left">Disagree: Legally requiring the hiring of minorities or women is just reverse discrimination. Quotas based on race or gender are wrong, regardless of who they benefit. The best person for the job should be hired, period.</p>
-        <div class="column">
-          <img src="images/issues/aa.jpg">
-          <h3>Support Affirmative Action programs</h3>
-          <span class="glyphicon glyphicon-question-sign"></span>
-        </div>
-        <p class="issue-info-right">Agree: We need to make up for past injustice. Until women and minorities are proportionately represented in the upper classes of society and the workplace, the government should give them a hand up.</p>
-      </section>
-      <br>
-      <div class="buttons aa-buttons">
-        <button type="button" value="1" class="btn strong-disagree btn-circle btn-xl aa-button">Strongly<br> Disagree</button>
-        <button type="button" value="2" class="btn disagree btn-circle btn-xl aa-button">Disagree</button>
-        <button type="button" value="3" class="btn neutral btn-circle btn-xl aa-button">Neutral</button>
-        <button type="button" value="4" class="btn agree btn-circle btn-xl aa-button">Agree</button>
-        <button type="button" value="5" class="btn strong-agree btn-circle btn-xl aa-button">Strongly<br> Agree</button>
-      </div>
-    </div>
-
-    <div class="results">
-
-      <div class="match container-fluid">
-        <h1>It's a match!</h1>
-        <h4>Your top 3 candidates:</h4>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <table class="table match-table">
-            <tbody>
-              <tr>
-                <td class="match-pic-1"></td>
-                <td class="match-score match-score-1">
-                  <p class="match">Compatibility<br>Score</p>
-                </td>
-                <td class="match-info-1">
-                  <p class="match affiliation-1"><b>Affiliation:</b></p>
-                  <p class="match position-1"><b>Current Position:</b></p>
-                  <p class="match experience-1"><b>Political Experience:</b></p>
-                </td>
-              </tr>
-              <tr>
-                <td class="match-pic-2"></td>
-                <td class="match-score match-score-2">
-                  <p class="match">Compatibility<br>Score</p>
-                </td>
-                <td class="match-info-2">
-                  <p class="match affiliation-2"><b>Affiliation:</b></p>
-                  <p class="match position-2"><b>Current Position:</b></p>
-                  <p class="match experience-2"><b>Political Experience:</b></p>
-                </td>
-              </tr>
-              <tr>
-                <td class="match-pic-3"></td>
-                <td class="match-score match-score-3">
-                  <p class="match">Compatibility<br>Score</p>
-                </td>
-                <td class="match-info-3">
-                  <p class="match affiliation-3"><b>Affiliation:</b></p>
-                  <p class="match position-3"><b>Current Position:</b></p>
-                  <p class="match experience-3"><b>Political Experience:</b></p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <a class="links" href="about.html">About</a>
-          <a class="links" href="index.html">Home</a>
-          <div id='shareButton' class="fb-share-button" data-href="http://d-stew.github.io/personal-project-q1/" data-layout="button"></div>
-        </div>
-      </div>
-    </div>
-
-  </body>
-  <script type="text/javascript" src="app.js"></script>
 </html>
