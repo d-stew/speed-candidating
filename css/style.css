@@ -238,3 +238,24 @@ td {
   left: 48%;
   position: relative;
 }
+
+div.about {
+  max-width: 65%;
+}
+
+h4.about {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: rgb(17, 49, 120);
+    font-size: 17px;
+    margin: 0 0 3% 3.3%;
+}
+
+a.about-links {
+  margin: 0 0 0 3.3%;
+  background-color: rgb(17, 49, 120);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 7px;
+}
