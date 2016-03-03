@@ -335,22 +335,37 @@ console.log('avg', localStorage.getItem('avg'));
     $('.equalpay-buttons').show();
   });
 
-    $('.equalpay-button').click(function(){
-      user.equalpay = this.value;
-      for (var i = 0; i < candidates.length; i++) {
-        if(this.value == candidates[i].equalpay) {
-          candidates[i].matchScore += 1;
-        };
-        if(Math.abs(this.value - candidates[i].equalpay) === 1) {
-          candidates[i].matchScore += 0.5;
-        };
+  $('.equalpay-button').click(function(){
+    user.equalpay = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].equalpay) {
+        candidates[i].matchScore += 1;
       };
-      // Sorts candidates by match score
-      candidates.sort(function(a,b) {
-  			return  b.matchScore - a.matchScore;
-  		});
-
+      if(Math.abs(this.value - candidates[i].equalpay) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
+    };
     $('.equalpay').slideUp();
+    $('.aa').fadeIn('slow');
+    $('.aa-buttons').show();
+  });
+
+  $('.aa-button').click(function(){
+    user.aa = this.value;
+    for (var i = 0; i < candidates.length; i++) {
+      if(this.value == candidates[i].aa) {
+        candidates[i].matchScore += 1;
+      };
+      if(Math.abs(this.value - candidates[i].aa) === 1) {
+        candidates[i].matchScore += 0.5;
+      };
+    };
+    // Sorts candidates by match score
+    candidates.sort(function(a,b) {
+      return  b.matchScore - a.matchScore;
+    });
+
+    $('.aa').slideUp();
     $('.head-bar').slideUp();
     $('.results').fadeIn('slow');
     // Adds candidate pictures to match table
@@ -362,9 +377,9 @@ console.log('avg', localStorage.getItem('avg'));
     $('.match-info-2').prepend('<h4 class="match">' + candidates[1].info.name + '</h4>');
     $('.match-info-3').prepend('<h4 class="match">' + candidates[2].info.name + '</h4>');
     // Add candidate compatibility score to match table
-    $('.match-score-1').prepend('<h2 class="match">'+ ((candidates[0].matchScore / 20)*100).toFixed() +'%</h2>');
-    $('.match-score-2').prepend('<h2 class="match">'+ ((candidates[1].matchScore / 20)*100).toFixed() +'%</h2>');
-    $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 20)*100).toFixed() +'%</h2>');
+    $('.match-score-1').prepend('<h2 class="match">'+ ((candidates[0].matchScore / 21)*100).toFixed() +'%</h2>');
+    $('.match-score-2').prepend('<h2 class="match">'+ ((candidates[1].matchScore / 21)*100).toFixed() +'%</h2>');
+    $('.match-score-3').prepend('<h2 class="match">'+ ((candidates[2].matchScore / 21)*100).toFixed() +'%</h2>');
 
     // localStorage.setItem('avgHillary', ((candidates[0].matchScore / 19)*100).toFixed() * localStorage.getItem('avgHillary'))
 
@@ -410,6 +425,7 @@ var trump = {
   citizens: 4,
   abortion: 2,
   equalpay: 3,
+  aa: 4,
   image: "images/trump.jpg"
 };
 
@@ -436,6 +452,7 @@ var sanders = {
   citizens: 5,
   abortion: 5,
   equalpay: 5,
+  aa: 5,
   image: "images/sanders.jpg"
 };
 
@@ -487,6 +504,7 @@ var johnson = {
   citizens: 4,
   abortion: 4,
   equalpay: 2,
+  aa: 4,
   image: "images/johnson.jpg"
 };
 
@@ -513,6 +531,7 @@ var rubio = {
   citizens: 1,
   abortion: 1,
   equalpay: 2,
+  aa: 2,
   image: "images/rubio.jpg"
 };
 
@@ -539,6 +558,7 @@ var clinton = {
   citizens: 5,
   abortion: 5,
   equalpay: 5,
+  aa: 5,
   image: "images/clinton.jpg"
 };
 
@@ -565,6 +585,7 @@ var kasich = {
   citizens: 3,
   abortion: 2,
   equalpay: 2,
+  aa: 4,
   image: "images/kasich.jpg"
 };
 
@@ -591,6 +612,7 @@ var cruz = {
   citizens: 1,
   abortion: 1,
   equalpay: 2,
+  aa: 2,
   image: "images/cruz.jpg"
 };
 
@@ -617,6 +639,7 @@ var stein = {
   citizens: 5,
   abortion: 5,
   equalpay: 5,
+  aa: 5,
   image: "images/stein.jpg"
 };
 
