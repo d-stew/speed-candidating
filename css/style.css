@@ -4,6 +4,7 @@
   color: rgb(200, 56, 53);
   position: absolute;
   left: 3%;
+  top: 50%;
 }
 
 
@@ -13,6 +14,7 @@
   color: rgb(17, 49, 120);
   position: absolute;
   right: 3%;
+  top: 50%;
 }
 
 #flagBanner {
