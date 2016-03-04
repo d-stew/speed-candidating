@@ -17,6 +17,9 @@
 #flagBanner {
   margin-bottom: -30px;
 }
+#mobileBanner {
+  display: none;
+}
 header h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -125,6 +128,7 @@ a.about {
   border-radius: 50%;
   margin-left: 15px;
   margin-right: 15px;
+  margin-top: 15px;
   border: .5em solid
 }
 .btn.strong-disagree {
@@ -254,6 +258,17 @@ a.about-links {
 }
 
 @media only screen and (max-width : 767px) {
+    html {
+      max-height: 100vh;
+      max-width: 100vw;
+    }
+    #flagBanner{
+      display: none;
+    }
+    #mobileBanner{
+      display:block;
+      margin-bottom: -30px;
+    }
     header h1 {
       font-size: 34px;
     }
@@ -265,10 +280,11 @@ a.about-links {
       width: 50%;
     }
     h1 {
-      font-size: 30px;
+      font-size: 26px;
+      margin: 0 3%;
     }
     h3 {
-      font-size: 22px;
+      font-size: 20px;
     }
     .heads {
       height: 20%;
@@ -296,9 +312,11 @@ a.about-links {
     .btn-circle.btn-xl {
       margin-right: 0;
       margin-left: 0;
+      margin-top: 0;
     }
     .match h1 {
       font-size: 42px;
+      margin-top:4%;
     }
     .match h4 {
       font-size: 14px;
@@ -315,5 +333,15 @@ a.about-links {
     }
     p.match {
       font-size: 10px;
+    }
+    div.about-page {
+      max-width: 100%;
+      margin-top: 10%;
+    }
+    h4.about-page {
+      font-size: 12px;
+    }
+    h3.about-page {
+      font-size: 12px;
     }
 }
