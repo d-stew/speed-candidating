@@ -78,7 +78,7 @@ $(document).ready(function() {
     $('.guns').show();
     $('.gun-buttons').show();
     $('.top-bar').animate({
-      'margin': '1.5% 0 0 0'
+      'margin': '1% 0 0 0'
     }, 1000);
     $('.img-circle').animate({
       'height': '100px',

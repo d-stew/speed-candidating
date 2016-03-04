@@ -31,9 +31,6 @@ header h3 {
   color: rgb(200, 56, 53);
   margin: 0 0 3% 3.3%;
 }
-h3 {
-  margin-top: 12px;
-}
 .enter-button {
   font-size: 22px;
   border: none;
@@ -171,8 +168,8 @@ a.about {
   border-color: rgb(3, 37, 89);
 }
 .match {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
   color: white;
   background-color: rgb(17, 49, 120);
 }
